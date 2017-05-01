@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import CreateBoard from './components/CreateBoard'
+import { createBoard } from './actions/boardActions'
+
 import logo from './logo.svg'
 import './App.css'
-import CreateBoard from './components/CreateBoard'
 
 class App extends Component {
   render() {
@@ -11,10 +14,28 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-          <CreateBoard />
+          <CreateBoard createBoard={this.props.createBoard}/>
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = ({board}) => {
+  return {
+    board
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createBoard: (size) => {
+      dispatch(createBoard(size))
+    }
+  }
+}
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
