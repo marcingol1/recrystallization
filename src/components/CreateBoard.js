@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CreateBoard = ({}) => (
-  <div> hello </div>
+  <div> hellos </div>
 )
 
 export default CreateBoard

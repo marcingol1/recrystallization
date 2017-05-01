@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import logo from '../logo.svg'
-import '../App.css'
-import CreateBoard from '../components/CreateBoard'
+import logo from './logo.svg'
+import './App.css'
+import CreateBoard from './components/CreateBoard'
 
 class App extends Component {
   render() {
