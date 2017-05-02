@@ -3,7 +3,6 @@ import { Field, reduxForm } from 'redux-form'
 
 const CreateBoard = ({ createBoard }) => (
   <form onSubmit={(event) => {
-    console.log(createBoard)
     createBoard(event.target.children[1].value)
     event.preventDefault()
   }}>
