@@ -8,15 +8,15 @@ const createRandomRow = (size) => [...new Array(size)].map(() => Math.round(Math
  * Maps rows of a board into a 2D array for startup of a game
  * @param size
  */
-const generateBoard = (size) => [ ... new Array(size)].map(() => createRandomRow(size))
+const generateBoard = (size) => [...new Array(size)].map(() => createRandomRow(size))
 
 /**
  * Creates object of cleared board with providen size
  * @param {Number} size - board size
  */
-export function instantiateBoard(size) {
+export function instantiateBoard (size) {
   return {
     size,
-    board: generateBoard(parseInt(size))
+    board: generateBoard(parseInt(size, 10))
   }
 }

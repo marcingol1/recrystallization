@@ -8,9 +8,10 @@ const initialState = {
 export default (state = initialState, action = {}) => {
   switch (action.type) {
     case ActionType.CREATE_BOARD: {
+      console.log(action.board);
       return action.board
     }
     default:
-      return [...state]
+      return { ...state }
   }
 }

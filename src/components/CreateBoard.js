@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react'
+import React  from 'react'
+import PropTypes from 'prop-types'
 import { Field, reduxForm } from 'redux-form'
 
-const CreateBoard = ({ createBoard }) => (
+const CreateBoard = ({ createBoard = () => {} }) => (
   <form onSubmit={(event) => {
     createBoard(event.target.children[1].value)
     event.preventDefault()
@@ -16,7 +17,7 @@ const CreateBoard = ({ createBoard }) => (
 const { func } = PropTypes
 
 CreateBoard.propTypes = {
-  createBoard: func.isRequired
+  createBoard: func
 }
 
 export default reduxForm({

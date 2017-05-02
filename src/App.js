@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import CreateBoard from './components/CreateBoard'
 import { createBoard } from './actions/boardActions'
+import CreateBoard from './components/CreateBoard'
+import Board from './components/Board'
 
 import logo from './logo.svg'
 import './App.css'
@@ -15,6 +16,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
           <CreateBoard createBoard={this.props.createBoard}/>
+          <Board board={this.props.board} />
       </div>
     )
   }
