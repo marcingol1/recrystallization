@@ -7,10 +7,10 @@ const CreateBoard = ({ createBoard = () => {} }) => (
     createBoard(event.target.children[1].value)
     event.preventDefault()
   }}>
-      <label htmlFor="board-size">Board size</label>
+      <label htmlFor="board-size">Enter board size</label>
       <Field name="board-size" component="input" type="text"/>
 
-      <button type="submit">Start</button>
+      <button type="submit">Create</button>
   </form>
 )
 

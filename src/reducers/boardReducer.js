@@ -2,7 +2,7 @@ import ActionType from '../constants/ActionType'
 
 const initialState = {
   size: 0,
-  board: []
+  board: [[]]
 }
 
 export default (state = initialState, action = {}) => {

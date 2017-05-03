@@ -1,10 +1,13 @@
 import React  from 'react'
 import PropTypes from 'prop-types'
+import BoardRow from './BoardRow'
 
-const Board = ({ board = {} }) => (
-  <div>
-    {board.board.map(row => <div> row </div>)}
-  </div>
+const Board = ({ boardData = {} }) => (
+  <table>
+    <tbody>
+      {boardData.board.map( (row, index) => <BoardRow key={index} row={row} />)}
+    </tbody>
+  </table>
 )
 
 const { object } = PropTypes

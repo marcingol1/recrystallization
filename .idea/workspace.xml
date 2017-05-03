@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1acda6b8-bb20-4d7d-88f6-76c9bc2fd042" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Board.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/BoardRow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Board.js" afterPath="$PROJECT_DIR$/src/components/Board.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/CreateBoard.js" afterPath="$PROJECT_DIR$/src/components/CreateBoard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logo.svg" afterPath="$PROJECT_DIR$/src/logo.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/boardReducer.js" afterPath="$PROJECT_DIR$/src/reducers/boardReducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/boardUtils.js" afterPath="$PROJECT_DIR$/src/utils/boardUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,14 +24,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Board.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Board.js">
+      <file leaf-file-name="logo.svg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/logo.svg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,11 +61,13 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/store.js" />
         <option value="$PROJECT_DIR$/src/actions/boardActions.js" />
-        <option value="$PROJECT_DIR$/src/components/CreateBoard.js" />
+        <option value="$PROJECT_DIR$/src/components/Board.js" />
+        <option value="$PROJECT_DIR$/src/utils/boardUtils.js" />
+        <option value="$PROJECT_DIR$/src/components/BoardRow.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/reducers/boardReducer.js" />
-        <option value="$PROJECT_DIR$/src/utils/boardUtils.js" />
-        <option value="$PROJECT_DIR$/src/components/Board.js" />
+        <option value="$PROJECT_DIR$/src/components/CreateBoard.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
       </list>
     </option>
   </component>
@@ -84,9 +84,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1440" />
-    <option name="y" value="-458" />
+    <option name="y" value="-480" />
     <option name="width" value="1920" />
-    <option name="height" value="1058" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -306,8 +306,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/constants" />
@@ -413,15 +417,15 @@
       <workItem from="1493657233420" duration="195000" />
       <workItem from="1493657566823" duration="290000" />
       <workItem from="1493657904993" duration="1811000" />
-      <workItem from="1493660141894" duration="7041000" />
+      <workItem from="1493660141894" duration="9924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9431000" />
+    <option name="totallyTimeSpent" value="12314000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-458" width="1920" height="1058" extended-state="6" />
+    <frame x="1440" y="-480" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -450,7 +454,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Board.js</url>
+          <line>18</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -467,16 +480,16 @@
         <state relative-caret-position="161">
           <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <marker date="1493762426000" expanded="true" signature="7:271" ph="..." />
-            <marker date="1493762426000" expanded="true" signature="301:637" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="314:635" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="335:625" ph="&lt;div/&gt;" />
-            <marker date="1493762426000" expanded="true" signature="365:505" ph="&lt;div/&gt;" />
-            <marker date="1493762426000" expanded="true" signature="676:704" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="687:702" ph="{&quot;board&quot;: board...}" />
-            <marker date="1493762426000" expanded="true" signature="747:834" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="758:832" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="787:828" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="7:271" ph="..." />
+            <marker date="1493813689000" expanded="true" signature="301:648" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="314:646" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="335:636" ph="&lt;div/&gt;" />
+            <marker date="1493813689000" expanded="true" signature="365:574" ph="&lt;div/&gt;" />
+            <marker date="1493813689000" expanded="true" signature="687:715" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="698:713" ph="{&quot;board&quot;: board...}" />
+            <marker date="1493813689000" expanded="true" signature="758:845" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="769:843" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="798:839" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -530,31 +543,6 @@
         <state relative-caret-position="46">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1493656161000" expanded="true" signature="5:30" ph="{...}" />
-            <marker date="1493656161000" expanded="true" signature="42:109" ph="{...}" />
-            <marker date="1493656161000" expanded="true" signature="123:202" ph="{...}" />
-            <marker date="1493656161000" expanded="true" signature="215:238" ph="{...}" />
-            <marker date="1493656161000" expanded="true" signature="265:340" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logo.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493656161000" expanded="true" signature="65:2669" ph="..." />
-            <marker date="1493656161000" expanded="true" signature="88:2662" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,54 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CreateBoard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <marker date="1493762331000" expanded="true" signature="7:107" ph="..." />
-            <marker date="1493762331000" expanded="true" signature="165:444" ph="&lt;form/&gt;" />
-            <marker date="1493762331000" expanded="true" signature="192:272" ph="{...}" />
-            <marker date="1493762331000" expanded="true" signature="500:523" ph="{&quot;createBoard&quot;: func...}" />
-            <marker date="1493762331000" expanded="true" signature="550:576" ph="{&quot;form&quot;: 'board-create'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <marker date="1493762426000" expanded="true" signature="7:271" ph="..." />
-            <marker date="1493762426000" expanded="true" signature="301:637" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="314:635" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="335:625" ph="&lt;div/&gt;" />
-            <marker date="1493762426000" expanded="true" signature="365:505" ph="&lt;div/&gt;" />
-            <marker date="1493762426000" expanded="true" signature="676:704" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="687:702" ph="{&quot;board&quot;: board...}" />
-            <marker date="1493762426000" expanded="true" signature="747:834" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="758:832" ph="{...}" />
-            <marker date="1493762426000" expanded="true" signature="787:828" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/boardReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding>
-            <marker date="1493762580000" expanded="true" signature="71:97" ph="{...}" />
-            <marker date="1493762580000" expanded="true" signature="153:325" ph="{...}" />
-            <marker date="1493762580000" expanded="true" signature="178:323" ph="{...}" />
-            <marker date="1493762580000" expanded="true" signature="213:280" ph="..." />
-            <marker date="1493762580000" expanded="true" signature="214:280" ph="{...}" />
-            <marker date="1493762580000" expanded="true" signature="293:319" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/boardActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -683,7 +623,7 @@
     <entry file="file://$PROJECT_DIR$/src/utils/boardUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <marker date="1493762668000" expanded="true" signature="0:125" ph="/** Generates a single row of a board and populates it with a random bool values (0, 1) ...*/" />
             <marker date="1493762668000" expanded="true" signature="219:303" ph="/** Maps rows of a board into a 2D array for startup of a game ...*/" />
@@ -696,11 +636,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="115">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1493813113000" expanded="true" signature="7:95" ph="..." />
+            <marker date="1493813113000" expanded="true" signature="139:263" ph="&lt;table/&gt;" />
+            <marker date="1493813113000" expanded="true" signature="151:252" ph="&lt;tbody/&gt;" />
+            <marker date="1493813113000" expanded="true" signature="315:340" ph="{&quot;createBoard&quot;: object...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BoardRow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <marker date="1493813302000" expanded="true" signature="7:61" ph="..." />
+            <marker date="1493813302000" expanded="true" signature="171:295" ph="&lt;tr/&gt;" />
+            <marker date="1493813302000" expanded="true" signature="206:285" ph="{...}" />
+            <marker date="1493813302000" expanded="true" signature="347:371" ph="{&quot;createBoard&quot;: array...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <marker date="1493813689000" expanded="true" signature="7:271" ph="..." />
+            <marker date="1493813689000" expanded="true" signature="301:648" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="314:646" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="335:636" ph="&lt;div/&gt;" />
+            <marker date="1493813689000" expanded="true" signature="365:574" ph="&lt;div/&gt;" />
+            <marker date="1493813689000" expanded="true" signature="687:715" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="698:713" ph="{&quot;board&quot;: board...}" />
+            <marker date="1493813689000" expanded="true" signature="758:845" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="769:843" ph="{...}" />
+            <marker date="1493813689000" expanded="true" signature="798:839" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/boardReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <marker date="1493813701000" expanded="true" signature="71:99" ph="{...}" />
+            <marker date="1493813701000" expanded="true" signature="155:327" ph="{...}" />
+            <marker date="1493813701000" expanded="true" signature="180:325" ph="{...}" />
+            <marker date="1493813701000" expanded="true" signature="215:282" ph="..." />
+            <marker date="1493813701000" expanded="true" signature="216:282" ph="{...}" />
+            <marker date="1493813701000" expanded="true" signature="295:321" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CreateBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <marker date="1493813925000" expanded="true" signature="7:107" ph="..." />
+            <marker date="1493813925000" expanded="true" signature="165:451" ph="&lt;form/&gt;" />
+            <marker date="1493813925000" expanded="true" signature="192:272" ph="{...}" />
+            <marker date="1493813925000" expanded="true" signature="507:530" ph="{&quot;createBoard&quot;: func...}" />
+            <marker date="1493813925000" expanded="true" signature="557:583" ph="{&quot;form&quot;: 'board-create'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <marker date="1493813952000" expanded="true" signature="5:30" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="42:109" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="123:202" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="215:238" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="265:340" ph="..." />
+            <marker date="1493813952000" expanded="true" signature="348:371" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="379:399" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="407:445" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="453:494" ph="{...}" />
+            <marker date="1493813952000" expanded="true" signature="503:540" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logo.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
