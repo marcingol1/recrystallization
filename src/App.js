@@ -9,7 +9,7 @@ import './App.css'
 
 class App extends Component {
   componentDidMount() {
-    this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 100)
+    this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 300)
   }
 
   componentWillUnmount() {

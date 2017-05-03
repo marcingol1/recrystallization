@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: darkslategray;
+  background-color: #1B5A7A;
   height: 150px;
   padding: 30px;
   color: white;
@@ -39,9 +39,11 @@ input {
 }
 
 .dead {
-    background-color: darkturquoise;
+    transition: background-color 0.2s linear;
+    background-color: #1AA59A;
 }
 
 .alive {
-    background-color: fuchsia;
+    transition: background-color 0.2s linear;
+    background-color: #A6ED8E;
 }
