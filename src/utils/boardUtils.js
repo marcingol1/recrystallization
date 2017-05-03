@@ -20,3 +20,5 @@ export function instantiateBoard (size) {
     board: generateBoard(parseInt(size, 10))
   }
 }
+
+export function cellLifecycle(cell) {}
