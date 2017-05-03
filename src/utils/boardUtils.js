@@ -38,8 +38,8 @@ export function boardLifecycle (boardData) {
 }
 
 function getCell(boardData, row, column) {
-  if (row < 0 || column < 0 || boardData.length < row ||
-    !boardData[row] || boardData[row].length < column) return 0
+  if (row < 0 || column < 0) return 0
+  if (row === boardData.length || column === boardData.length) return 0
   return boardData[row][column]
 }
 
@@ -56,7 +56,6 @@ function getNeighbours (boardData, row, column) {
     getCell(boardData, row - 1, column),
     getCell(boardData, row - 1, column + 1),
     getCell(boardData, row, column - 1),
-    getCell(boardData, row, column),
     getCell(boardData, row, column + 1),
     getCell(boardData, row + 1, column - 1),
     getCell(boardData, row + 1, column),
