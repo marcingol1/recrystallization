@@ -25,6 +25,8 @@
 
 table {
     margin: 0 auto;
+    border-spacing: 1px;
+    padding: 0;
 }
 
 input {
@@ -37,9 +39,9 @@ input {
 }
 
 .dead {
-    background-color: lightslategray;
+    background-color: darkturquoise;
 }
 
 .alive {
-    background-color: lightgreen;
+    background-color: fuchsia;
 }

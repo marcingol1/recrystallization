@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createBoard } from './actions/boardActions'
+import { createBoard, boardLifecycleAction } from './actions/boardActions'
 import CreateBoard from './components/CreateBoard'
 import Board from './components/Board'
 
@@ -8,6 +8,14 @@ import logo from './logo.svg'
 import './App.css'
 
 class App extends Component {
+  componentDidMount() {
+    this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 3000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
+
   render() {
     return (
       <div className="App">
@@ -32,6 +40,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     createBoard: (size) => {
       dispatch(createBoard(size))
+    },
+    boardLifecycle: (boardData) => {
+      dispatch(boardLifecycleAction(boardData))
     }
   }
 }
