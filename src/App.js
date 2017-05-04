@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createBoard, boardLifecycleAction } from './actions/boardActions'
+import { createBoard, boardLifecycleAction, cellChange } from './actions/boardActions'
 import { makeInterval, removeInterval } from './actions/animationActions'
 import CreateBoard from './components/CreateBoard'
 import Board from './components/Board'
@@ -10,7 +10,7 @@ import './App.css'
 
 class App extends Component {
   componentDidMount() {
-    this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 30)
+    this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 100)
     //this.props.makeInterval(() => this.props.boardLifecycle(this.props.board.board), 300)
   }
 
@@ -31,13 +31,13 @@ class App extends Component {
           }}/>
           <input type="button" value="Start the game" onClick={() => {
             if (!this.interval) {
-              this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 30)
+              this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 100)
             }
           }}/>
 
-          <CreateBoard timeout={this.props.timeout} createBoard={this.props.createBoard}/>
+          <CreateBoard createBoard={this.props.createBoard}/>
         </div>
-          <Board boardData={this.props.board} />
+          <Board cellChange={this.props.cellChange} boardData={this.props.board} />
       </div>
     )
   }
@@ -57,6 +57,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     boardLifecycle: (boardData) => {
       dispatch(boardLifecycleAction(boardData))
+    },
+    cellChange: (boardData, row, column) => {
+      dispatch(cellChange(boardData, row, column))
     },
     makeInterval: (intervalCb, intervalTime) => {
       dispatch(makeInterval(intervalCb, intervalTime))

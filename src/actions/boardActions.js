@@ -22,3 +22,18 @@ export function boardLifecycleAction (boardData) {
     board: boardLifecycle(boardData)
   }
 }
+
+/**
+ * Changes a signle cell on a board
+ * @param boardData - data about all of the cells
+ * @param row
+ * @param column
+ */
+export function cellChange(boardData, row, column) {
+  let temp = boardData
+  temp[row][column] = !temp[row][column]
+  return {
+    type: ActionType.CELL_CHANGE,
+    board: temp
+  }
+}

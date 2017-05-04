@@ -8,14 +8,12 @@ const initialState = {
 export default (state = initialState, action = {}) => {
   switch (action.type) {
     case ActionType.CREATE_INTERVAL: {
-      //why interval starts?
       return {
         intervalCb: action.intervalCb,
         intervalTime: action.intervalTime
       }
     }
     case ActionType.REMOVE_INTERVAL: {
-      clearInterval(state.intervalCb)
       return {
         ...state
       }
