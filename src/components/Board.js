@@ -5,7 +5,7 @@ import BoardRow from './BoardRow'
 const Board = ({ boardData = {} }) => (
   <table>
     <tbody>
-      {boardData.board.map( (row, index) => <BoardRow key={index} row={row} />)}
+      {boardData.board.map( (row, index) => <BoardRow key={`row-${index}`} index={index} row={row} />)}
     </tbody>
   </table>
 )

@@ -11,6 +11,11 @@ export function createBoard (size) {
   }
 }
 
+/**
+ * Creates a single iteration on a board
+ * @param boardData
+ * @returns {{type: string, board: Array}} - state of board
+ */
 export function boardLifecycleAction (boardData) {
   return {
     type: ActionType.BOARD_LIFECYCLE,

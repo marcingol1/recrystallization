@@ -9,10 +9,12 @@ const middlewares = applyMiddleware(
 )
 
 import boardReducer from './reducers/boardReducer'
+import animationReducer from './reducers/animationReducer'
 
 const reducers = combineReducers({
   form: formReducer,
-  board: boardReducer
+  board: boardReducer,
+  animation: animationReducer
 })
 
 export default compose(

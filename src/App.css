@@ -39,7 +39,6 @@ input {
 }
 
 .dead {
-    transition: background-color 0.2s linear;
     background-color: #1AA59A;
 }
 
