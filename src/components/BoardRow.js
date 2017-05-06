@@ -5,12 +5,12 @@ const generateClassName = (cell) => cell ? 'cell alive' : 'cell dead'
 
 const BoardRow = ({row = [], index = 0, cellChange = () => {}}) => (
   <tr>
-    {row.map((cell, columnIndex) => {
+    {row.map((cell, column) => {
       return (
-        <td key={`cell-${index}-${columnIndex}`}
+        <td key={`${index}-${column}`}
             className={generateClassName(cell)}
-            onClick={() => cellChange(index, columnIndex)}
-        >
+            data-row={index}
+            data-column={column}>
         </td>
       )
     })}

@@ -1,13 +1,15 @@
 import ActionType from '../constants/ActionType'
-import { instantiateBoard } from '../utils/boardUtils'
+import { randomBoard } from '../utils/boardUtils'
 import { boardLifecycle } from '../utils/boardUtils'
 /**
  * Creates board for game of life with providen size
  */
-export function createBoard (size) {
+export function createBoard (size, type) {
+  let fun = randomBoard;
+
   return {
     type: ActionType.CREATE_BOARD,
-    board: instantiateBoard(size)
+    board: randomBoard(size)
   }
 }
 

@@ -10,7 +10,7 @@ import './App.css'
 
 class App extends Component {
   componentDidMount() {
-    this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 100)
+    //this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 200)
     //this.props.makeInterval(() => this.props.boardLifecycle(this.props.board.board), 300)
   }
 
@@ -31,7 +31,7 @@ class App extends Component {
           }}/>
           <input type="button" value="Start the game" onClick={() => {
             if (!this.interval) {
-              this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 100)
+              this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 200)
             }
           }}/>
 
@@ -52,8 +52,8 @@ const mapStateToProps = ({board, animation}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createBoard: (size) => {
-      dispatch(createBoard(size))
+    createBoard: (size, type) => {
+      dispatch(createBoard(size, type))
     },
     boardLifecycle: (boardData) => {
       dispatch(boardLifecycleAction(boardData))
