@@ -1,6 +1,7 @@
 import React  from 'react'
 import PropTypes from 'prop-types'
 import { Field, reduxForm } from 'redux-form'
+import Settings from '../constants/Settings'
 
 const CreateBoard = ({createBoard, handleSubmit}) => (
   <form onSubmit={handleSubmit}>
@@ -10,25 +11,24 @@ const CreateBoard = ({createBoard, handleSubmit}) => (
       <div>
         <Field name="neighbourhoodType" component="select">
           <option />
-          <option value="vonNeumann">Von Neumann</option>
-          <option value="moore">Moore</option>
-          <option value="hexLeft">Hexagonal Left</option>
-          <option value="hexRight">Hexagonal Right</option>
-          <option value="hexRand">Hexagonal Random</option>
-          <option value="pentRand">Pentagonal Random</option>
+          <option value={Settings.VON_NEUMANN}>Von Neumann</option>
+          <option value={Settings.MOORE}>Moore</option>
+          <option value={Settings.HEX_LEFT}>Hexagonal Left</option>
+          <option value={Settings.HEX_RIGHT}>Hexagonal Right</option>
+          <option value={Settings.HEX_RAND}>Hexagonal Random</option>
+          <option value={Settings.PENT_RAND}>Pentagonal Random</option>
         </Field>
       </div>
     </div>
 
     <div id="generating-germs">
-      <label>Choose type of germs generating distribution</label>
+      <label>Choose type of distribution on a board</label>
       <div>
         <Field name="distributionType" component="select">
-          <option />
-          <option value="distributed">Evenly</option>
-          <option value="random">Randomly</option>
-          <option value="randomRadius">Randomly with radius</option>
-          <option value="clear">Clear</option>
+          <option value={Settings.CLEAR_BOARD}>Clear</option>
+          <option value={Settings.DISTRIBUTED_BOARD}>Evenly</option>
+          <option value={Settings.RANDOM_BOARD}>Randomly</option>
+          <option value={Settings.RANDOM_RADIUS_BOARD}>Randomly with radius</option>
         </Field>
       </div>
     </div>
@@ -46,7 +46,7 @@ const CreateBoard = ({createBoard, handleSubmit}) => (
     </div>
 
     <label htmlFor="board-size">Enter board size</label>
-    <Field name="boardSize" component="input" type="text"/>
+    <Field name="boardSize" component="input" type="text" />
 
     <button type="submit">Create</button>
   </form>
@@ -60,5 +60,6 @@ CreateBoard.propTypes = {
 }
 
 export default reduxForm({
-  form: 'boardCreate'
+  form: 'boardCreate',
+  defaultValues: { enabled: true}
 })(CreateBoard)
