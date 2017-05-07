@@ -2,21 +2,16 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createBoard, boardLifecycleAction, cellChange } from './actions/boardActions'
 import { makeInterval, removeInterval } from './actions/animationActions'
-import CreateBoard from './components/CreateBoard'
+import CreateBoard from './containers/CreateBoard'
 import Board from './components/Board'
+import handleBoardCreate from './utils/handleBoardCreate'
 
 import logo from './logo.svg'
 import './App.css'
 
 class App extends Component {
-  componentDidMount() {
-    //this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 200)
-    //this.props.makeInterval(() => this.props.boardLifecycle(this.props.board.board), 300)
-  }
-
   componentWillUnmount() {
-    //this.props.removeInterval()
-    removeInterval(this.interval)
+    this.props.removeInterval()
   }
 
   render() {
@@ -26,16 +21,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to the `Game of Life`</h2>
           <input type="button" value="Stop the game" onClick={() => {
-            clearInterval(this.interval)
-            this.interval = null
+              this.props.removeInterval()
           }}/>
           <input type="button" value="Start the game" onClick={() => {
-            if (!this.interval) {
-              this.interval = setInterval(() => this.props.boardLifecycle(this.props.board.board), 200)
+            if (!this.props.animation.interval) {
+              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board), 200)
             }
           }}/>
-
-          <CreateBoard createBoard={this.props.createBoard}/>
+          <CreateBoard onSubmit={this.props.handleBoardCreate}/>
         </div>
           <Board cellChange={this.props.cellChange} boardData={this.props.board} />
       </div>
@@ -52,14 +45,17 @@ const mapStateToProps = ({board, animation}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createBoard: (size, type) => {
-      dispatch(createBoard(size, type))
+    createBoard: (type, size) => {
+      dispatch(createBoard(type, size))
     },
     boardLifecycle: (boardData) => {
       dispatch(boardLifecycleAction(boardData))
     },
-    cellChange: (boardData, row, column) => {
-      dispatch(cellChange(boardData, row, column))
+    handleBoardCreate: (form) => {
+      dispatch(handleBoardCreate(form))
+    },
+    cellChange: (row, column) => {
+      dispatch(cellChange(row, column))
     },
     makeInterval: (intervalCb, intervalTime) => {
       dispatch(makeInterval(intervalCb, intervalTime))

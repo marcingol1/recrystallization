@@ -9,7 +9,9 @@ export function makeInterval (intervalCb, intervalTime) {
     intervalTime: intervalTime
   }
 }
-
+/**
+ * Removes an interval if one is already set
+ */
 export function removeInterval () {
   return {
     type: ActionType.REMOVE_INTERVAL

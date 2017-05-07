@@ -1,7 +1,7 @@
 import ActionType from '../constants/ActionType'
 
 const initialState = {
-  intervalCb: null,
+  interval: undefined,
   intervalTime: 1000
 }
 
@@ -9,13 +9,15 @@ export default (state = initialState, action = {}) => {
   switch (action.type) {
     case ActionType.CREATE_INTERVAL: {
       return {
-        intervalCb: action.intervalCb,
+        interval: action.interval,
         intervalTime: action.intervalTime
       }
     }
     case ActionType.REMOVE_INTERVAL: {
+      clearInterval(state.interval)
       return {
-        ...state
+        ...state,
+        interval: undefined
       }
     }
     default:

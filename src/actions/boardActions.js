@@ -1,15 +1,14 @@
 import ActionType from '../constants/ActionType'
-import { randomBoard } from '../utils/boardUtils'
-import { boardLifecycle } from '../utils/boardUtils'
+import { generateBoard } from '../utils/generateUtils'
 /**
  * Creates board for game of life with providen size
+ * @param size {Number} - size of a board
+ * @param type {String} - type of a board to generate
  */
 export function createBoard (size, type) {
-  let fun = randomBoard;
-
   return {
     type: ActionType.CREATE_BOARD,
-    board: randomBoard(size)
+    board: generateBoard(size, type)
   }
 }
 
@@ -21,21 +20,19 @@ export function createBoard (size, type) {
 export function boardLifecycleAction (boardData) {
   return {
     type: ActionType.BOARD_LIFECYCLE,
-    board: boardLifecycle(boardData)
+    board: boardData
   }
 }
 
 /**
  * Changes a signle cell on a board
- * @param boardData - data about all of the cells
  * @param row
  * @param column
  */
-export function cellChange(boardData, row, column) {
-  let temp = boardData
-  temp[row][column] = !temp[row][column]
+export function cellChange(row, column) {
   return {
     type: ActionType.CELL_CHANGE,
-    board: temp
+    row,
+    column
   }
 }
