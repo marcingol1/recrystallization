@@ -10,5 +10,9 @@ export default {
   HEX_LEFT: 'HEX_LEFT',
   HEX_RIGHT: 'HEX_RIGHT',
   HEX_RAND: 'HEX_RAND',
-  PENT_RAND: 'PENT_RAND'
+  PENT_RAND: 'PENT_RAND',
+
+  //Types of game
+  GAME_OF_LIFE: 'GAME_OF_LIFE',
+  GERM_EXPANSION: 'GERM_EXPANSION'
 }

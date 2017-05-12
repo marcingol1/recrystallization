@@ -1,4 +1,5 @@
 import { createBoard } from '../actions/boardActions'
+import ActionType from '../constants/ActionType'
 import Settings from '../constants/Settings'
 
 /**
@@ -8,16 +9,21 @@ import Settings from '../constants/Settings'
  * @param form.distributionType {String}
  * @param form.borderCondition {Boolean}
  * @param form.neighbourhoodType {String}
+ * @param dispatch {Function} - pass dispatch to set options
  * @returns {{type, board}|*} - action to dispatch creating board
  */
-export default function handleBoardCreate(form) {
+export default function handleBoardCreate(form, dispatch) {
   const formData = extractData(form)
+  dispatch({
+    type: ActionType.SET_SETTING,
+    formData
+  })
   return createBoard(formData.boardSize, formData.distributionType)
 }
 
 const extractData = (form) => {
   return {
-    boardSize: parseInt(form.boardSize, 10) || 0,
+    boardSize: parseInt(form.boardSize, 10) || 15,
     distributionType: form.distributionType || Settings.CLEAR_BOARD,
     borderCondition: form.borderCondition || true,
     neighbourhoodType: form.neighbourhoodType || Settings.MOORE

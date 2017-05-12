@@ -14,13 +14,15 @@ export function createBoard (size, type) {
 
 /**
  * Creates a single iteration on a board
- * @param boardData
+ * @param boardData {Object}
+ * @param settings {Object}
  * @returns {{type: string, board: Array}} - state of board
  */
-export function boardLifecycleAction (boardData) {
+export function boardLifecycleAction (boardData, settings) {
   return {
     type: ActionType.BOARD_LIFECYCLE,
-    board: boardData
+    board: boardData,
+    settings
   }
 }
 

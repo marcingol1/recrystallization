@@ -10,11 +10,13 @@ const middlewares = applyMiddleware(
 
 import boardReducer from './reducers/boardReducer'
 import animationReducer from './reducers/animationReducer'
+import settingsReducer from './reducers/settingsReducer'
 
 const reducers = combineReducers({
   form: formReducer,
   board: boardReducer,
-  animation: animationReducer
+  animation: animationReducer,
+  settings: settingsReducer
 })
 
 export default compose(

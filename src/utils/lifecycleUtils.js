@@ -1,19 +1,51 @@
-
+import Settings from '../constants/Settings'
 
 /**
  * Makes a one iteration of Conwell's game
  * Changes cells to alive/dead depending on neighbours
  * @param boardData {Array} - data in format:
+ * @param settings {Object} - settings for algorithm
  * [
  *  [0, 0, 1],
  *  [1, 0, 1],
  *  [1, 1, 1]
  *  ]
- *  alive cell - alive if has 2 or 3
+ *  alive cell - alive if has 2 or 3 otherwise dies from starvation / overpopulation
  *  dead cell - rebirths if has 3 by reproduction
  */
-export function boardLifecycle (boardData) {
-  return boardData.map((rowData, row) => rowData.map((cell, column) => hexLeftRule(boardData, cell, row, column)))
+/*boardSize
+ :
+ 15
+ borderCondition
+ :
+ true
+ distributionType
+ :
+ "CLEAR_BOARD"
+ gameType
+ :
+ "GAME_OF_LIFE"
+ neighbourhoodType
+ :
+ "MOORE"*/
+export function boardLifecycle (boardData, settings) {
+  let fun, ifPeriodic
+  switch (settings.neighbourhoodType) {
+    case Settings.MOORE: {
+      fun = mooreRule
+      break;
+    }
+    case Settings.VON_NEUMANN: {
+      fun = vonNeumanRule
+      break;
+    }
+    case Settings.HEX_LEFT: {
+      fun = hexLeftRule
+      break;
+    }
+  }
+
+  return boardData.map((rowData, row) => rowData.map((cell, column) => fun(boardData, cell, row, column)))
 }
 
 /**
@@ -76,10 +108,11 @@ function getNeighboursMoore (boardData, row, column, ifPeriodic) {
  * @param cell - single cell to have her fate decided
  * @param row - row position in boardData
  * @param column - column position in boardData
+ * @param ifPeriodic - should periodic conditions be taken into consideration
  * @returns {Number} - indicates if cell is alive- if there is no change the same cell is returned
  */
-function mooreRule (boardData, cell, row, column) {
-  const quantityNeighbours = getNeighboursMoore(boardData, row, column, true).reduce((x, y) => x + y)
+function mooreRule (boardData, cell, row, column, ifPeriodic = true) {
+  const quantityNeighbours = getNeighboursMoore(boardData, row, column, ifPeriodic).reduce((x, y) => x + y)
   if (cell) {
     return quantityNeighbours === 2 || quantityNeighbours === 3 ? cell : 0
   } else {

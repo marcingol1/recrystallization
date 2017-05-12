@@ -25,7 +25,7 @@ class App extends Component {
           }}/>
           <input type="button" value="Start the game" onClick={() => {
             if (!this.props.animation.interval) {
-              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board), 200)
+              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board, this.props.settings), 200)
             }
           }}/>
           <CreateBoard onSubmit={this.props.handleBoardCreate}/>
@@ -36,10 +36,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({board, animation}) => {
+const mapStateToProps = ({board, animation, settings}) => {
   return {
     board,
-    animation
+    animation,
+    settings
   }
 }
 
@@ -48,11 +49,11 @@ const mapDispatchToProps = (dispatch) => {
     createBoard: (type, size) => {
       dispatch(createBoard(type, size))
     },
-    boardLifecycle: (boardData) => {
-      dispatch(boardLifecycleAction(boardData))
+    boardLifecycle: (boardData, settings) => {
+      dispatch(boardLifecycleAction(boardData, settings))
     },
     handleBoardCreate: (form) => {
-      dispatch(handleBoardCreate(form))
+      dispatch(handleBoardCreate(form, dispatch))
     },
     cellChange: (row, column) => {
       dispatch(cellChange(row, column))

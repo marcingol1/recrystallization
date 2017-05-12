@@ -1,18 +1,36 @@
 import React  from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
 import Settings from '../constants/Settings'
 
-const CreateBoard = ({createBoard, handleSubmit}) => (
+const initialValues = {
+  gameType: Settings.GAME_OF_LIFE,
+  neighbourhoodType: Settings.MOORE,
+  distributionType: Settings.CLEAR_BOARD,
+  borderCondition: true,
+  boardSize: 15
+}
+
+let CreateBoard = ({createBoard, handleSubmit}) => (
   <form onSubmit={handleSubmit}>
+
+    <div id="game-type">
+      <label>Choose type of simulation</label>
+      <div>
+        <Field name="gameType" component="select">
+          <option value={Settings.GAME_OF_LIFE}>Game of life</option>
+          <option value={Settings.GERM_EXPANSION}>Germ expansion</option>
+        </Field>
+      </div>
+    </div>
 
     <div id="neighbourhood-type">
       <label>Choose neighbourhood type</label>
       <div>
         <Field name="neighbourhoodType" component="select">
-          <option />
-          <option value={Settings.VON_NEUMANN}>Von Neumann</option>
           <option value={Settings.MOORE}>Moore</option>
+          <option value={Settings.VON_NEUMANN}>Von Neumann</option>
           <option value={Settings.HEX_LEFT}>Hexagonal Left</option>
           <option value={Settings.HEX_RIGHT}>Hexagonal Right</option>
           <option value={Settings.HEX_RAND}>Hexagonal Random</option>
@@ -59,7 +77,14 @@ CreateBoard.propTypes = {
   handleSubmit: func
 }
 
-export default reduxForm({
-  form: 'boardCreate',
-  defaultValues: { enabled: true}
+CreateBoard = reduxForm({
+  form: 'boardCreate'
 })(CreateBoard)
+
+CreateBoard = connect(
+  () => ({
+      initialValues
+    })
+)(CreateBoard)
+
+export default CreateBoard

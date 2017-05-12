@@ -2,8 +2,11 @@ import _ from 'lodash'
 import ActionType from '../constants/ActionType'
 import { boardLifecycle } from '../utils/lifecycleUtils'
 const initialState = [
-  [0,1],
-  [1,1]
+  [0,1,1,0,1],
+  [0,1,1,0,1],
+  [0,1,1,0,1],
+  [0,1,1,0,1],
+  [0,1,1,0,1]
 ]
 
 export default (state = initialState, action = {}) => {
@@ -15,7 +18,7 @@ export default (state = initialState, action = {}) => {
     }
     case ActionType.BOARD_LIFECYCLE: {
       return [
-        ...boardLifecycle(action.board)
+        ...boardLifecycle(action.board, action.settings)
       ]
     }
     case ActionType.CELL_CHANGE: {
