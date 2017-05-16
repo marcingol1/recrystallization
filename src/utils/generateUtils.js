@@ -42,13 +42,28 @@ const evenlyDistributedBoard = (size, pointsQuantity) => {
 
 const randomBoardRadius = (size) => [...new Array(size)].map(() => [...new Array(size).fill(0)])
 
+/**
+ * Generates random color
+ * @returns {string}
+ */
+export function getRandomColor() {
+    const letters = '0123456789ABCDEF'
+    let color = '#'
+    for (let i = 0; i < 6; i++ ) {
+      color += letters[Math.floor(Math.random() * 16)]
+    }
+    return color
+}
 
 /**
  * Depending on a type generates custom board
  * @param size - size of a board to generate
  * @param type - type of allocating alive cells
+ * @param pointsQuantity - quantity of points to get
+ * @param colorsQuantity - quantity of points to get
  */
-export function generateBoard(size = 0, type) {
+export function generateBoard(size = 0, type, pointsQuantity = 0,  colorsQuantity = 100) {
+
   switch (type) {
     case Settings.CLEAR_BOARD: {
       return clearBoard(size)
@@ -57,7 +72,7 @@ export function generateBoard(size = 0, type) {
       return randomBoard(size)
     }
     case Settings.DISTRIBUTED_BOARD: {
-      return evenlyDistributedBoard(size, 15)
+      return evenlyDistributedBoard(size, pointsQuantity)
     }
     case Settings.RANDOM_RADIUS_BOARD: {
       return randomBoardRadius(size)

@@ -2,13 +2,13 @@ import React  from 'react'
 import PropTypes from 'prop-types'
 import BoardRow from './BoardRow'
 
-const Board = ({boardData = [], cellChange = () => {}}) => (
+const Board = ({boardData = [], cellChange = () => {}, colors = []}) => (
   <table onClick={(event) => {
     cellChange(event.target.getAttribute('data-row'), event.target.getAttribute('data-column'))
   }}>
     <tbody>
     {boardData.map((row, index) =>
-      <BoardRow cellChange={cellChange.bind(this, boardData)} key={`row-${index}`} index={index} row={row}/>)
+      <BoardRow colors={colors} cellChange={cellChange.bind(this, boardData)} key={`row-${index}`} index={index} row={row}/>)
     }
     </tbody>
   </table>

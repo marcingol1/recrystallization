@@ -18,12 +18,13 @@ export default function handleBoardCreate(form, dispatch) {
     type: ActionType.SET_SETTING,
     formData
   })
-  return createBoard(formData.boardSize, formData.distributionType)
+  return createBoard(formData)
 }
 
 const extractData = (form) => {
   return {
-    boardSize: parseInt(form.boardSize, 10) || 15,
+    ...form,
+    boardSize: parseInt(form.boardSize, 10) || 60,
     distributionType: form.distributionType || Settings.CLEAR_BOARD,
     borderCondition: form.borderCondition || true,
     neighbourhoodType: form.neighbourhoodType || Settings.MOORE

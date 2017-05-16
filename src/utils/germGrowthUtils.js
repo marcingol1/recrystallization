@@ -11,6 +11,7 @@ import _ from 'lodash'
  */
 export function boardLifecycle (boardData, settings) {
   const isPeriodic = true
+  const pointsQuantity = settings.pointsQuantity
   let fun
   switch (settings.neighbourhoodType) {
     case Settings.MOORE: {
@@ -29,7 +30,7 @@ export function boardLifecycle (boardData, settings) {
   //Need to create a copy for a distinction between actual state and new state
   let tempBoard = _.cloneDeep(boardData)
   boardData.map((rowData, row) => rowData.map((cell, column) => {
-      if (cell) fun(tempBoard, row, column, isPeriodic)
+      if (cell) fun(tempBoard, row, column, isPeriodic, pointsQuantity)
       return cell
     }))
   return tempBoard;
@@ -43,8 +44,8 @@ export function boardLifecycle (boardData, settings) {
  * @returns {Array} - 0 or 1 from boardData
  */
 function getCell (boardData, row, column) {
-  if (row < 0 || column < 0) return 0
-  if (row === boardData.length || column === boardData.length) return 0
+  if (row < 0 || column < 0) return [0, 0] // what to return?
+  if (row === boardData.length || column === boardData.length) return [0, 0]
   return [row, column]
 }
 

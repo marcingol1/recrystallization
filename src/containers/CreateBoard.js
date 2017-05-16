@@ -9,7 +9,9 @@ const initialValues = {
   neighbourhoodType: Settings.MOORE,
   distributionType: Settings.CLEAR_BOARD,
   borderCondition: true,
-  boardSize: 60
+  boardSize: 60,
+  pointsQuantity: 10,
+  colorsQuantity: 10
 }
 
 let CreateBoard = ({createBoard, handleSubmit}) => (
@@ -62,6 +64,12 @@ let CreateBoard = ({createBoard, handleSubmit}) => (
         />
       </div>
     </div>
+
+    <label htmlFor="points-quantity">Enter points quantity</label>
+    <Field name="pointsQuantity" component="input" type="text" />
+
+    <label htmlFor="colors-quantity">Enter colors quantity</label>
+    <Field name="colorsQuantity" component="input" type="text" />
 
     <label htmlFor="board-size">Enter board size</label>
     <Field name="boardSize" component="input" type="text" />

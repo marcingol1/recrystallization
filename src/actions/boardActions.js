@@ -2,13 +2,16 @@ import ActionType from '../constants/ActionType'
 import { generateBoard } from '../utils/generateUtils'
 /**
  * Creates board for game of life with providen size
- * @param size {Number} - size of a board
- * @param type {String} - type of a board to generate
+ * @param form {Object} - data of a form
+ * @param form.boardSize {Number} - size of a board
+ * @param form.distributionType {String} - type of a board to generate
+ * @oaran form.pointsQuantity {Number} - number of points to get
+ * @oaran form.colorsQuantity {Number} - number of colors to get
  */
-export function createBoard (size, type) {
+export function createBoard (form) {
   return {
     type: ActionType.CREATE_BOARD,
-    board: generateBoard(size, type)
+    board: generateBoard(form.boardSize, form.distributionType, form.pointsQuantity, form.colorsQuantity)
   }
 }
 
@@ -16,7 +19,7 @@ export function createBoard (size, type) {
  * Creates a single iteration on a board
  * @param boardData {Object}
  * @param settings {Object}
- * @returns {{type: string, board: Array}} - state of board
+ * @returns {{type: string, board: Array, settings: Object}} - state of board
  */
 export function boardLifecycleAction (boardData, settings) {
   return {
@@ -36,5 +39,11 @@ export function cellChange(row, column) {
     type: ActionType.CELL_CHANGE,
     row,
     column
+  }
+}
+
+export function addColor() {
+  return {
+    type: ActionType.ADD_COLOR
   }
 }
