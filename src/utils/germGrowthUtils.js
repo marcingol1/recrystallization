@@ -1,4 +1,5 @@
 import Settings from '../constants/Settings'
+import _ from 'lodash'
 
 /**
  * Makes a one iteration of Conwell's game
@@ -9,24 +10,29 @@ import Settings from '../constants/Settings'
  *  dead cell - rebirths if has 3 by reproduction
  */
 export function boardLifecycle (boardData, settings) {
-  const isPeriodic = settings.borderCondition
+  const isPeriodic = true
   let fun
   switch (settings.neighbourhoodType) {
     case Settings.MOORE: {
       fun = mooreRule
-      break;
+      break
     }
     case Settings.VON_NEUMANN: {
       fun = vonNeumanRule
-      break;
+      break
     }
     case Settings.HEX_LEFT: {
       fun = hexLeftRule
-      break;
+      break
     }
   }
-
-  return boardData.map((rowData, row) => rowData.map((cell, column) => fun(boardData, cell, row, column, isPeriodic)))
+  //Need to create a copy for a distinction between actual state and new state
+  let tempBoard = _.cloneDeep(boardData)
+  boardData.map((rowData, row) => rowData.map((cell, column) => {
+      if (cell) fun(tempBoard, row, column, isPeriodic)
+      return cell
+    }))
+  return tempBoard;
 }
 
 /**
@@ -34,12 +40,12 @@ export function boardLifecycle (boardData, settings) {
  * @param boardData - stores all information about cells
  * @param row - row position in boardData
  * @param column - column position in boardData
- * @returns {Number} - 0 or 1 from boardData
+ * @returns {Array} - 0 or 1 from boardData
  */
-function getCell(boardData, row, column) {
+function getCell (boardData, row, column) {
   if (row < 0 || column < 0) return 0
   if (row === boardData.length || column === boardData.length) return 0
-  return boardData[row][column]
+  return [row, column]
 }
 
 /**
@@ -47,17 +53,17 @@ function getCell(boardData, row, column) {
  * @param boardData - stores all information about cells
  * @param row - row position in boardData
  * @param column - column position in boardData
- * @returns {Number} - 0 or 1 from boardData
+ * @returns {Array} - 0 or 1 from boardData
  */
-function getCellPeriodic(boardData, row, column) {
+function getCellPeriodic (boardData, row, column) {
   let tempRow = row,
-      tempCol = column,
-      size = boardData.length
+    tempCol = column,
+    size = boardData.length
   if (row === -1) tempRow = size - 1
   else if (row === size) tempRow = 0
   if (column === -1) tempCol = size - 1
   else if (column === size) tempCol = 0
-  return boardData[tempRow][tempCol]
+  return [tempRow, tempCol]
 }
 
 /**
@@ -68,10 +74,9 @@ function getCellPeriodic(boardData, row, column) {
  * @param ifPeriodic - flag indicationg if cells should be taken periodically
  * @returns {Array} - neighbours of a cell
  */
-function getNeighboursMoore (boardData, row, column, ifPeriodic) {
-  let fun = getCell;
-  if (ifPeriodic) fun = getCellPeriodic;
-  return [
+function setNeighboursMoore (boardData, row, column, ifPeriodic) {
+  let fun = ifPeriodic ? getCellPeriodic : getCell
+  let neighbours = [
     fun(boardData, row - 1, column - 1),
     fun(boardData, row - 1, column),
     fun(boardData, row - 1, column + 1),
@@ -81,24 +86,21 @@ function getNeighboursMoore (boardData, row, column, ifPeriodic) {
     fun(boardData, row + 1, column),
     fun(boardData, row + 1, column + 1)
   ]
+  return neighbours.map((element) => {
+    boardData[element[0]][element[1]] = 1
+  })
 }
 
 /**
  * Core function counting neighbours and recycling cell based on Moore rule
  * @param boardData - stores all information about cells
- * @param cell - single cell to have her fate decided
  * @param row - row position in boardData
  * @param column - column position in boardData
  * @param ifPeriodic - should periodic conditions be taken into consideration
- * @returns {Number} - indicates if cell is alive- if there is no change the same cell is returned
+ * @returns {Object} - indicates if cell is alive- if there is no change the same cell is returned
  */
-function mooreRule (boardData, cell, row, column, ifPeriodic = true) {
-  const quantityNeighbours = getNeighboursMoore(boardData, row, column, ifPeriodic).reduce((x, y) => x + y)
-  if (cell) {
-    return quantityNeighbours === 2 || quantityNeighbours === 3 ? cell : 0
-  } else {
-    return quantityNeighbours === 3 ? 1 : cell
-  }
+function mooreRule (boardData, row, column, ifPeriodic = true) {
+  return setNeighboursMoore(boardData, row, column, ifPeriodic)
 }
 
 /**
@@ -109,34 +111,30 @@ function mooreRule (boardData, cell, row, column, ifPeriodic = true) {
  * @param ifPeriodic - flag indicationg if cells should be taken periodically
  * @returns {Array} - neighbours of a cell
  */
-function getNeighboursVonNeumann (boardData, row, column, ifPeriodic) {
-  let fun = getCell;
-  if (ifPeriodic) fun = getCellPeriodic;
-  return [
+function setNeighboursVonNeumann (boardData, row, column, ifPeriodic = true) {
+  let fun = ifPeriodic ? getCellPeriodic : getCell
+  let neighbours = [
     fun(boardData, row - 1, column),
     fun(boardData, row, column - 1),
     fun(boardData, row, column + 1),
     fun(boardData, row + 1, column)
   ]
+  neighbours.map((element) => {
+    boardData[element[0]][element[1]] = 1
+  })
 }
 
 /**
  * Core function counting neighbours and recycling cell based on Moore rule
  * @param boardData - stores all information about cells
- * @param cell - single cell to have her fate decided
  * @param row - row position in boardData
  * @param column - column position in boardData
+ * @param ifPeriodic - flag indicationg if cells should be taken periodically
  * @returns {Number} - indicates if cell is alive- if there is no change the same cell is returned
  */
-function vonNeumanRule (boardData, cell, row, column) {
-  const quantityNeighbours = getNeighboursVonNeumann(boardData, row, column, true).reduce((x, y) => x + y)
-  if (cell) {
-    return quantityNeighbours === 2 || quantityNeighbours === 3 ? cell : 0
-  } else {
-    return quantityNeighbours === 3 ? 1 : cell
-  }
+function vonNeumanRule (boardData, row, column, ifPeriodic = true) {
+  setNeighboursVonNeumann(boardData, row, column, ifPeriodic)
 }
-
 
 /**
  * Creates array of neighbours for a cell
@@ -146,31 +144,28 @@ function vonNeumanRule (boardData, cell, row, column) {
  * @param ifPeriodic - flag indicationg if cells should be taken periodically
  * @returns {Array} - neighbours of a cell
  */
-function getNeighboursHexLeft (boardData, row, column, ifPeriodic) {
-  let fun = getCell;
-  if (ifPeriodic) fun = getCellPeriodic;
-  return [
+function setNeighboursHexLeft (boardData, row, column, ifPeriodic) {
+  let fun = ifPeriodic ? getCellPeriodic : getCell
+  let neighbours = [
     fun(boardData, row - 1, column - 1),
     fun(boardData, row - 1, column),
     fun(boardData, row, column - 1),
     fun(boardData, row + 1, column - 1),
     fun(boardData, row + 1, column)
   ]
+  neighbours.map((element) => {
+    boardData[element[0]][element[1]] = 1
+  })
 }
 
 /**
  * Core function counting neighbours and recycling cell based on Moore rule
  * @param boardData - stores all information about cells
- * @param cell - single cell to have her fate decided
  * @param row - row position in boardData
  * @param column - column position in boardData
+ * @param ifPeriodic - flag indicationg if cells should be taken periodically
  * @returns {Number} - indicates if cell is alive- if there is no change the same cell is returned
  */
-function hexLeftRule (boardData, cell, row, column) {
-  const quantityNeighbours = getNeighboursHexLeft(boardData, row, column, true).reduce((x, y) => x + y)
-  if (cell) {
-    return quantityNeighbours === 2 || quantityNeighbours === 3 ? cell : 0
-  } else {
-    return quantityNeighbours === 3 ? 1 : cell
-  }
+function hexLeftRule (boardData, row, column, ifPeriodic = true) {
+  setNeighboursHexLeft(boardData, row, column, ifPeriodic)
 }

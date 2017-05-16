@@ -25,7 +25,7 @@ class App extends Component {
           }}/>
           <input type="button" value="Start the game" onClick={() => {
             if (!this.props.animation.interval) {
-              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board, this.props.settings), 200)
+              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board, this.props.settings), 500)
             }
           }}/>
           <CreateBoard onSubmit={this.props.handleBoardCreate}/>

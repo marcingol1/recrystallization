@@ -18,6 +18,32 @@ const randomBoard = (size) => [...new Array(size)].map(() => randomRow(size))
 const clearBoard = (size) => [...new Array(size)].map(() => [...new Array(size).fill(0)])
 
 /**
+ * Checks if a point should be taken for a random distribution value
+ * @param row
+ * @param column
+ * @param pointsQuantity
+ * @returns {Number}
+ */
+const isEvenDistribution = (row, column, pointsQuantity) => {
+  //if (row === 0 || column === 0 ) return 0
+  return row % pointsQuantity || column % pointsQuantity ? 0 : 1
+}
+
+/**
+ * Creates evenly distributed amount of point on board
+ * @param size
+ * @param pointsQuantity - number of points
+ */
+const evenlyDistributedBoard = (size, pointsQuantity) => {
+  return [...new Array(size)]
+    .map(() => [...new Array(size)])
+    .map((rowData, row) => rowData.map((cell, column) => isEvenDistribution(row, column, pointsQuantity)))
+}
+
+const randomBoardRadius = (size) => [...new Array(size)].map(() => [...new Array(size).fill(0)])
+
+
+/**
  * Depending on a type generates custom board
  * @param size - size of a board to generate
  * @param type - type of allocating alive cells
@@ -29,6 +55,12 @@ export function generateBoard(size = 0, type) {
     }
     case Settings.RANDOM_BOARD: {
       return randomBoard(size)
+    }
+    case Settings.DISTRIBUTED_BOARD: {
+      return evenlyDistributedBoard(size, 15)
+    }
+    case Settings.RANDOM_RADIUS_BOARD: {
+      return randomBoardRadius(size)
     }
     default: {
       return randomBoard(size)

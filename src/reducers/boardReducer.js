@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import ActionType from '../constants/ActionType'
-import { boardLifecycle } from '../utils/lifecycleUtils'
+//import { boardLifecycle } from '../utils/lifecycleUtils'
+import { boardLifecycle } from '../utils/germGrowthUtils'
 const initialState = [
   [0,1,1,0,1],
   [0,1,1,0,1],

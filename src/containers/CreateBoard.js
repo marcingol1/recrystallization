@@ -9,7 +9,7 @@ const initialValues = {
   neighbourhoodType: Settings.MOORE,
   distributionType: Settings.CLEAR_BOARD,
   borderCondition: true,
-  boardSize: 15
+  boardSize: 60
 }
 
 let CreateBoard = ({createBoard, handleSubmit}) => (
@@ -43,9 +43,9 @@ let CreateBoard = ({createBoard, handleSubmit}) => (
       <label>Choose type of distribution on a board</label>
       <div>
         <Field name="distributionType" component="select">
+          <option value={Settings.RANDOM_BOARD}>Randomly</option>
           <option value={Settings.CLEAR_BOARD}>Clear</option>
           <option value={Settings.DISTRIBUTED_BOARD}>Evenly</option>
-          <option value={Settings.RANDOM_BOARD}>Randomly</option>
           <option value={Settings.RANDOM_RADIUS_BOARD}>Randomly with radius</option>
         </Field>
       </div>
