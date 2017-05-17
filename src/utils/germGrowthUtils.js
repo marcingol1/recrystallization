@@ -126,7 +126,9 @@ function setNeighboursVonNeumann (boardData, row, column, ifPeriodic = true) {
     fun(boardData, row + 1, column)
   ]
   neighbours.map((element) => {
-    boardData[element[0]][element[1]] = { value: 1, color: element.color}
+    if (!boardData[element[0]][element[1]].color) {
+      boardData[element[0]][element[1]] = { value: 1, color: boardData[row][column].color}
+    }
   })
 }
 
@@ -160,7 +162,9 @@ function setNeighboursHexLeft (boardData, row, column, ifPeriodic) {
     fun(boardData, row + 1, column)
   ]
   neighbours.map((element) => {
-    boardData[element[0]][element[1]] = { value: 1, color: element.color}
+    if (!boardData[element[0]][element[1]].color) {
+      boardData[element[0]][element[1]] = { value: 1, color: boardData[row][column].color}
+    }
   })
 }
 

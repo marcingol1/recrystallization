@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1acda6b8-bb20-4d7d-88f6-76c9bc2fd042" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Board.js" afterPath="$PROJECT_DIR$/src/components/Board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/BoardRow.js" afterPath="$PROJECT_DIR$/src/components/BoardRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/boardReducer.js" afterPath="$PROJECT_DIR$/src/reducers/boardReducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/generateUtils.js" afterPath="$PROJECT_DIR$/src/utils/generateUtils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/germGrowthUtils.js" afterPath="$PROJECT_DIR$/src/utils/germGrowthUtils.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +20,8 @@
       <file leaf-file-name="germGrowthUtils.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/germGrowthUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="436">
+              <caret line="167" column="3" lean-forward="false" selection-start-line="167" selection-start-column="3" selection-end-line="167" selection-end-column="3" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -478,12 +472,12 @@
       <workItem from="1494274663874" duration="19000" />
       <workItem from="1494606949740" duration="5215000" />
       <workItem from="1494952800861" duration="7546000" />
-      <workItem from="1494965765163" duration="12178000" />
+      <workItem from="1494965765163" duration="12251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79557000" />
+    <option name="totallyTimeSpent" value="79630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -1215,8 +1209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/germGrowthUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="436">
+          <caret line="167" column="3" lean-forward="false" selection-start-line="167" selection-start-column="3" selection-end-line="167" selection-end-column="3" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
