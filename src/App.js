@@ -49,9 +49,6 @@ const mapStateToProps = ({board, animation, settings}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createBoard: (type, size) => {
-      dispatch(createBoard(type, size))
-    },
     boardLifecycle: (boardData, settings) => {
       dispatch(boardLifecycleAction(boardData, settings))
     },

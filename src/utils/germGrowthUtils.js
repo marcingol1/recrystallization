@@ -12,6 +12,7 @@ import _ from 'lodash'
 export function boardLifecycle (boardData, settings) {
   const isPeriodic = true
   const pointsQuantity = settings.pointsQuantity
+  const colorsQuantity = settings.colorsQuantity
   let fun
   switch (settings.neighbourhoodType) {
     case Settings.MOORE: {
@@ -30,7 +31,7 @@ export function boardLifecycle (boardData, settings) {
   //Need to create a copy for a distinction between actual state and new state
   let tempBoard = _.cloneDeep(boardData)
   boardData.map((rowData, row) => rowData.map((cell, column) => {
-      if (cell) fun(tempBoard, row, column, isPeriodic, pointsQuantity)
+      if (cell.value) fun(tempBoard, row, column, isPeriodic)
       return cell
     }))
   return tempBoard;
@@ -44,7 +45,7 @@ export function boardLifecycle (boardData, settings) {
  * @returns {Array} - 0 or 1 from boardData
  */
 function getCell (boardData, row, column) {
-  if (row < 0 || column < 0) return [0, 0] // what to return?
+  if (row < 0 || column < 0) return [0, 0] // h
   if (row === boardData.length || column === boardData.length) return [0, 0]
   return [row, column]
 }
@@ -87,8 +88,12 @@ function setNeighboursMoore (boardData, row, column, ifPeriodic) {
     fun(boardData, row + 1, column),
     fun(boardData, row + 1, column + 1)
   ]
+
+
   return neighbours.map((element) => {
-    boardData[element[0]][element[1]] = 1
+    if (!boardData[element[0]][element[1]].color) {
+      boardData[element[0]][element[1]] = { value: 1, color: boardData[row][column].color}
+    }
   })
 }
 
@@ -121,7 +126,7 @@ function setNeighboursVonNeumann (boardData, row, column, ifPeriodic = true) {
     fun(boardData, row + 1, column)
   ]
   neighbours.map((element) => {
-    boardData[element[0]][element[1]] = 1
+    boardData[element[0]][element[1]] = { value: 1, color: element.color}
   })
 }
 
@@ -155,7 +160,7 @@ function setNeighboursHexLeft (boardData, row, column, ifPeriodic) {
     fun(boardData, row + 1, column)
   ]
   neighbours.map((element) => {
-    boardData[element[0]][element[1]] = 1
+    boardData[element[0]][element[1]] = { value: 1, color: element.color}
   })
 }
 

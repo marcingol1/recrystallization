@@ -1,13 +1,14 @@
 import React  from 'react'
 import PropTypes from 'prop-types'
 
-const generateClassName = (cell) => cell ? 'cell alive' : 'cell dead'
-
-const BoardRow = ({row = [], index = 0, cellChange = () => {}}) => (
+const generateClassName = (cell) => cell.value ? 'cell alive' : 'cell dead'
+const generateColor = (cell) => cell.value ? {backgroundColor: cell.color} : {}
+const BoardRow = ({row = [], index = 0}) => (
   <tr>
     {row.map((cell, column) => {
       return (
         <td key={`${index}-${column}`}
+            style={generateColor(cell)}
             className={generateClassName(cell)}
             data-row={index}
             data-column={column}>

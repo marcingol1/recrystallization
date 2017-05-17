@@ -2,12 +2,11 @@ import _ from 'lodash'
 import ActionType from '../constants/ActionType'
 //import { boardLifecycle } from '../utils/lifecycleUtils'
 import { boardLifecycle } from '../utils/germGrowthUtils'
+import { getRandomColor } from '../utils/generateUtils'
+
 const initialState = [
-  [0,1,1,0,1],
-  [0,1,1,0,1],
-  [0,1,1,0,1],
-  [0,1,1,0,1],
-  [0,1,1,0,1]
+  [{ value: 0, color: '#000' }, { value: 1, color: '#000'}],
+  [{ value: 0, color: '#000' }, { value: 1, color: '#000'}]
 ]
 
 export default (state = initialState, action = {}) => {
@@ -23,8 +22,8 @@ export default (state = initialState, action = {}) => {
       ]
     }
     case ActionType.CELL_CHANGE: {
-      let clone = _.cloneDeep(state)
-      clone[action.row][action.column] = !clone[action.row][action.column]
+      let clone = _.cloneDeep(state), obj = state[action.row][action.column]
+      clone[action.row][action.column] = { value: !obj.value, color: getRandomColor()}
       return [
         ...clone
       ]

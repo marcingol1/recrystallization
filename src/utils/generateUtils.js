@@ -3,7 +3,7 @@ import Settings from '../constants/Settings'
  * Generates a single row of a board and populates it with a random bool values (0, 1)
  * @param size - size of a row
  */
-const randomRow = (size) => [...new Array(size)].map(() => Math.round(Math.random()))
+const randomRow = (size) => [...new Array(size)].map(() => generateCell())
 
 /**
  * Maps rows of a board into a 2D array for startup of a game
@@ -15,7 +15,13 @@ const randomBoard = (size) => [...new Array(size)].map(() => randomRow(size))
  * Creates an empty board (all cells dead)
  * @param size
  */
-const clearBoard = (size) => [...new Array(size)].map(() => [...new Array(size).fill(0)])
+const clearBoard = (size) => [...new Array(size)].map(() => [...new Array(size).fill(generateCell(0))])
+
+/**
+ * Generates cell- if cell is dead it doesn't get a color
+ * @param value - alive or dead
+ */
+const generateCell = (value = Math.round(Math.random())) => ({ value, color: value ? getRandomColor() : 0 })
 
 /**
  * Checks if a point should be taken for a random distribution value
@@ -26,7 +32,7 @@ const clearBoard = (size) => [...new Array(size)].map(() => [...new Array(size).
  */
 const isEvenDistribution = (row, column, pointsQuantity) => {
   //if (row === 0 || column === 0 ) return 0
-  return row % pointsQuantity || column % pointsQuantity ? 0 : 1
+  return row % pointsQuantity || column % pointsQuantity ? generateCell(0) : generateCell(1)
 }
 
 /**
@@ -40,7 +46,7 @@ const evenlyDistributedBoard = (size, pointsQuantity) => {
     .map((rowData, row) => rowData.map((cell, column) => isEvenDistribution(row, column, pointsQuantity)))
 }
 
-const randomBoardRadius = (size) => [...new Array(size)].map(() => [...new Array(size).fill(0)])
+const randomBoardRadius = (size) => [...new Array(size)].map(() => [...new Array(size).fill(generateCell())])
 
 /**
  * Generates random color
