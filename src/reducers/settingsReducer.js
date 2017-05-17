@@ -7,8 +7,7 @@ const initialState = {
   neighbourhoodType: Settings.MOORE,
   distributionType: Settings.CLEAR_BOARD,
   borderCondition: true,
-  boardSize: 60,
-  colors: []
+  boardSize: 60
 }
 
 export default (state = initialState, action = {}) => {
