@@ -58,7 +58,7 @@ const randomBoardRadius = (size, pointsQuantity) => {
   let tempData = [...new Array(size)].map(() => [...new Array(size).fill(0)])
   let newData = [...new Array(size)].map(() => [...new Array(size).fill(generateCell(0))])
   let counter = 0
-  while (tempData.some( row => row.some( element => !element.value)) && counter < 1000) { //check if there is any falsy value
+  while (tempData.some( row => row.some( element => !element.value)) && counter < 10000) { //check if there is any falsy value
     let x = getRandomArbitrary(0, size),
       y = getRandomArbitrary(0, size)
     if (!counter) tempData[x][y] = generateCell(1)
@@ -93,10 +93,9 @@ export function getRandomColor() {
  * @param size - size of a board to generate
  * @param type - type of allocating alive cells
  * @param pointsQuantity - quantity of points to get
- * @param colorsQuantity - quantity of points to get
  */
-export function generateBoard(size = 0, type, pointsQuantity = 0,  colorsQuantity = 100) {
-
+export function generateBoard(size = 0, type, pointsQuantity = 0) {
+  
   switch (type) {
     case Settings.CLEAR_BOARD: {
       return clearBoard(size)

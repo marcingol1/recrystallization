@@ -55,12 +55,7 @@ let CreateBoard = ({createBoard, handleSubmit}) => (
     <div id="border-condition">
       <label htmlFor="border">Border condition</label>
       <div>
-        <Field
-          name="borderCondition"
-          id="border"
-          component="input"
-          type="checkbox"
-        />
+        <Field name="borderCondition" id="border" component="input" type="checkbox" />
       </div>
     </div>
 
