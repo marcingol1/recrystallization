@@ -22,16 +22,16 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img onClick={this.props.addColor} src={logo} className="App-logo" alt="logo"/>
-          <h2>Welcome to the `Game of Life`</h2>
-          <input type="button" value="Stop the game" onClick={() => {
-            this.props.removeInterval()
-          }}/>
-          <input type="button" value="Start the game" onClick={() => {
-            if (!this.props.animation.interval) {
-              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board, this.props.settings), 500)
-            }
-          }}/>
           <CreateBoard onSubmit={this.props.handleBoardCreate}/>
+          <button onClick={() => {
+            this.props.removeInterval()
+          }}>Stop </button>
+          <button onClick={() => {
+            if (!this.props.animation.interval) {
+              console.log(this.props.form.boardCreate.values)
+              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board, this.props.form.boardCreate.values), 500)
+            }
+          }}> Start </button>
         </div>
         <Board colors={this.props.settings.colors} cellChange={this.props.cellChange} boardData={this.props.board}/>
       </div>
@@ -39,11 +39,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({board, animation, settings}) => {
+const mapStateToProps = ({board, animation, settings, form}) => {
   return {
     board,
     animation,
-    settings
+    settings,
+    form
   }
 }
 

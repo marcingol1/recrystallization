@@ -10,7 +10,7 @@ import _ from 'lodash'
  *  dead cell - rebirths if has 3 by reproduction
  */
 export function boardLifecycle (boardData, settings) {
-  const isPeriodic = settings.borderCondition
+  const ifPeriodic = settings.borderCondition
   let fun
   switch (settings.neighbourhoodType) {
     case Settings.MOORE: {
@@ -44,7 +44,7 @@ export function boardLifecycle (boardData, settings) {
   //Need to create a copy for a distinction between actual state and new state
   let tempBoard = _.cloneDeep(boardData)
   boardData.map((rowData, row) => rowData.map((cell, column) => {
-      if (cell.value) fun(tempBoard, row, column, isPeriodic)
+      if (cell.value) fun(tempBoard, row, column, ifPeriodic)
       return cell
     }))
   return tempBoard;
@@ -118,7 +118,7 @@ function setNeighboursMoore (boardData, row, column, ifPeriodic) {
  * @param ifPeriodic - should periodic conditions be taken into consideration
  * @returns {Object} - indicates if cell is alive- if there is no change the same cell is returned
  */
-function mooreRule (boardData, row, column, ifPeriodic = true) {
+function mooreRule (boardData, row, column, ifPeriodic) {
   return setNeighboursMoore(boardData, row, column, ifPeriodic)
 }
 

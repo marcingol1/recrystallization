@@ -7,7 +7,7 @@ const initialState = {
   neighbourhoodType: Settings.MOORE,
   distributionType: Settings.CLEAR_BOARD,
   borderCondition: true,
-  boardSize: 60
+  boardSize: 40
 }
 
 export default (state = initialState, action = {}) => {
@@ -15,7 +15,7 @@ export default (state = initialState, action = {}) => {
     case ActionType.SET_SETTING: {
       return {
         ...state,
-        ...action.formData
+        ...action.form
       }
     }
     case ActionType.ADD_COLOR: {

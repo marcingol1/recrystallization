@@ -95,7 +95,6 @@ export function getRandomColor() {
  * @param pointsQuantity - quantity of points to get
  */
 export function generateBoard(size = 0, type, pointsQuantity = 0) {
-  
   switch (type) {
     case Settings.CLEAR_BOARD: {
       return clearBoard(size)

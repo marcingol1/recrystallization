@@ -9,23 +9,12 @@ const initialValues = {
   neighbourhoodType: Settings.MOORE,
   distributionType: Settings.CLEAR_BOARD,
   borderCondition: true,
-  boardSize: 60,
-  pointsQuantity: 10
+  boardSize: 40,
+  pointsQuantity: 5
 }
 
 let CreateBoard = ({createBoard, handleSubmit}) => (
   <form onSubmit={handleSubmit}>
-
-    <div id="game-type">
-      <label>Choose type of simulation</label>
-      <div>
-        <Field name="gameType" component="select">
-          <option value={Settings.GAME_OF_LIFE}>Game of life</option>
-          <option value={Settings.GERM_EXPANSION}>Germ expansion</option>
-        </Field>
-      </div>
-    </div>
-
     <div id="neighbourhood-type">
       <label>Choose neighbourhood type</label>
       <div>
@@ -54,16 +43,15 @@ let CreateBoard = ({createBoard, handleSubmit}) => (
 
     <div id="border-condition">
       <label htmlFor="border">Border condition</label>
-      <div>
-        <Field name="borderCondition" id="border" component="input" type="checkbox" />
-      </div>
+      <Field name="borderCondition" id="border" component="input" type="checkbox" />
     </div>
 
-    <label htmlFor="points-quantity">Enter points quantity</label>
-    <Field name="pointsQuantity" component="input" type="text" />
+      <label htmlFor="points-quantity">Enter points quantity</label>
+      <Field name="pointsQuantity" component="input" type="text" />
 
-    <label htmlFor="board-size">Enter board size</label>
-    <Field name="boardSize" component="input" type="text" />
+      <label htmlFor="board-size">Enter board size</label>
+      <Field name="boardSize" component="input" type="text" />
+
 
     <button type="submit">Create</button>
   </form>
