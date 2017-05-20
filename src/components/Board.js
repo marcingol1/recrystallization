@@ -8,7 +8,7 @@ const Board = ({boardData = [], cellChange = () => {}, colors = []}) => (
   }}>
     <tbody>
     {boardData.map((row, index) =>
-      <BoardRow colors={colors} key={`row-${index}`} index={index} row={row}/>)
+      <BoardRow key={`row-${index}`} index={index} row={row}/>)
     }
     </tbody>
   </table>

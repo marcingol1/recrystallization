@@ -22,7 +22,6 @@ export default function handleBoardCreate(form, dispatch) {
 }
 
 const extractData = (form) => {
-  console.log(form)
   return {
     ...form,
     boardSize: parseInt(form.boardSize, 10) || 60,

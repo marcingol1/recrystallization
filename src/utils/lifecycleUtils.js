@@ -8,7 +8,7 @@ import Settings from '../constants/Settings'
  *  alive cell - alive if has 2 or 3 otherwise dies from starvation / overpopulation
  *  dead cell - rebirths if has 3 by reproduction
  */
-export function boardLifecycle (boardData, settings) {
+export function boardLifecycleGame (boardData, settings) {
   const isPeriodic = settings.borderCondition
   let fun
   switch (settings.neighbourhoodType) {

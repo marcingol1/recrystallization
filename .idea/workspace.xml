@@ -2,14 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1acda6b8-bb20-4d7d-88f6-76c9bc2fd042" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/generateTypes/basicCell.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/generateTypes/clearBoard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/generateTypes/evenBoard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/generateTypes/randomBoard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/generateTypes/randomRadiusBoard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/lifeType/getCell.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/lifeType/hex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/lifeType/moore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/lifeType/pent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/lifeType/vonNeumann.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/reducers/settingsReducer.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Board.js" afterPath="$PROJECT_DIR$/src/components/Board.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/CreateBoard.js" afterPath="$PROJECT_DIR$/src/containers/CreateBoard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/settingsReducer.js" afterPath="$PROJECT_DIR$/src/reducers/settingsReducer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/boardReducer.js" afterPath="$PROJECT_DIR$/src/reducers/boardReducer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store.js" afterPath="$PROJECT_DIR$/src/store.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/generateUtils.js" afterPath="$PROJECT_DIR$/src/utils/generateUtils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/germGrowthUtils.js" afterPath="$PROJECT_DIR$/src/utils/germGrowthUtils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/handleBoardCreate.js" afterPath="$PROJECT_DIR$/src/utils/handleBoardCreate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/lifecycleUtils.js" afterPath="$PROJECT_DIR$/src/utils/lifecycleUtils.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +39,73 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="generateUtils.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-554">
+              <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generateUtils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/generateUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="84" column="34" lean-forward="true" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+            <state relative-caret-position="460">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="handleBoardCreate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/handleBoardCreate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="germGrowthUtils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/germGrowthUtils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="45" column="3" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boardReducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/boardReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateBoard.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/CreateBoard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animationReducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/animationReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -59,6 +136,20 @@
       <find>distributionType</find>
       <find>borderCondition</find>
       <find>ifPeriodic</find>
+      <find>settings</find>
+      <find>color</find>
+      <find>g</find>
+      <find>getRandom</find>
+      <find>getRandomC</find>
+      <find>getRandomCo</find>
+      <find>getRandomCol</find>
+      <find>evenly</find>
+      <find>getRandomColor</find>
+      <find>s</find>
+      <find>conso</find>
+      <find>console.</find>
+      <find>console.l</find>
+      <find>console.log</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -88,21 +179,32 @@
         <option value="$PROJECT_DIR$/src/components/CreateBoard.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/store.js" />
-        <option value="$PROJECT_DIR$/src/utils/lifecycleUtils.js" />
         <option value="$PROJECT_DIR$/src/constants/ActionType.js" />
         <option value="$PROJECT_DIR$/src/actions/boardActions.js" />
-        <option value="$PROJECT_DIR$/src/components/Board.js" />
         <option value="$PROJECT_DIR$/src/components/BoardRow.js" />
         <option value="$PROJECT_DIR$/src/constants/Settings.js" />
-        <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/utils/handleBoardCreate.js" />
         <option value="$PROJECT_DIR$/src/reducers/settingsReducer.js" />
-        <option value="$PROJECT_DIR$/src/containers/CreateBoard.js" />
-        <option value="$PROJECT_DIR$/src/utils/germGrowthUtils.js" />
+        <option value="$PROJECT_DIR$/src/utils/handleBoardCreate.js" />
+        <option value="$PROJECT_DIR$/src/components/Board.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/store.js" />
+        <option value="$PROJECT_DIR$/src/utils/lifecycleUtils.js" />
+        <option value="$PROJECT_DIR$/src/utils/generateTypes/ClearBoard.js" />
+        <option value="$PROJECT_DIR$/src/utils/generateTypes/clearBoard.js" />
+        <option value="$PROJECT_DIR$/src/utils/generateTypes/randomBoard.js" />
+        <option value="$PROJECT_DIR$/src/utils/generateTypes/basicCell.js" />
         <option value="$PROJECT_DIR$/src/reducers/boardReducer.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/utils/generateTypes/randomRadiusBoard.js" />
         <option value="$PROJECT_DIR$/src/utils/generateUtils.js" />
+        <option value="$PROJECT_DIR$/src/utils/generateTypes/evenBoard.js" />
+        <option value="$PROJECT_DIR$/src/utils/lifeType/getCell.js" />
+        <option value="$PROJECT_DIR$/src/utils/lifeType/moore.js" />
+        <option value="$PROJECT_DIR$/src/utils/lifeType/vonNeumann.js" />
+        <option value="$PROJECT_DIR$/src/utils/lifeType/hex.js" />
+        <option value="$PROJECT_DIR$/src/utils/germGrowthUtils.js" />
+        <option value="$PROJECT_DIR$/src/utils/lifeType/pent.js" />
+        <option value="$PROJECT_DIR$/src/containers/CreateBoard.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -207,6 +309,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,11 +461,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v7.0.0/bin/node" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
@@ -371,7 +473,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="search&#9;ACTION&#9;StructuralSearchPlugin.StructuralSearchAction&#10;lifecycle&#9;null&#9;null&#10;lifecycleUtils&#9;FILE&#9;file:///Users/dizlu/React/game-of-life/src/utils/lifecycleUtils.js&#10;boardLifecycle&#9;null&#9;null&#10;boardLife&#9;null&#9;null&#10;boardLifecycleAction&#9;null&#9;null&#10;split&#9;ACTION&#9;SplitVertically" />
+    <property name="SearchEverywhereHistoryKey" value="getRandomColor&#9;null&#9;null&#10;search&#9;ACTION&#9;StructuralSearchPlugin.StructuralSearchAction&#10;lifecycle&#9;null&#9;null&#10;lifecycleUtils&#9;FILE&#9;file:///Users/dizlu/React/game-of-life/src/utils/lifecycleUtils.js&#10;boardLifecycle&#9;null&#9;null&#10;boardLife&#9;null&#9;null&#10;boardLifecycleAction&#9;null&#9;null&#10;split&#9;ACTION&#9;SplitVertically" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
@@ -496,17 +598,18 @@
       <workItem from="1494952800861" duration="7546000" />
       <workItem from="1494965765163" duration="18427000" />
       <workItem from="1495125384079" duration="2500000" />
+      <workItem from="1495298225355" duration="4443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91503000" />
+    <option name="totallyTimeSpent" value="97356000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18263888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -518,22 +621,11 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +643,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>41</line>
+          <line>52</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -574,263 +666,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Options.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <marker date="1494100179000" expanded="true" signature="49:100" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BoardRow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
-          <folding>
-            <marker date="1495050573000" expanded="false" signature="7:61" ph="..." />
-            <marker date="1495050573000" expanded="true" signature="267:547" ph="&lt;tr/&gt;" />
-            <marker date="1495050573000" expanded="true" signature="303:537" ph="{...}" />
-            <marker date="1495050573000" expanded="true" signature="328:523" ph="&lt;td/&gt;" />
-            <marker date="1495050573000" expanded="true" signature="613:666" ph="{&quot;row&quot;: array...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <marker date="1495049332000" expanded="true" signature="7:95" ph="..." />
-            <marker date="1495049332000" expanded="true" signature="173:460" ph="&lt;table/&gt;" />
-            <marker date="1495049332000" expanded="true" signature="200:301" ph="{...}" />
-            <marker date="1495049332000" expanded="true" signature="308:449" ph="&lt;tbody/&gt;" />
-            <marker date="1495049332000" expanded="true" signature="515:559" ph="{&quot;createBoard&quot;: array...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/animationActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <marker date="1494090708000" expanded="true" signature="49:109" ph="/** Creates board for game of life with providen size ...*/" />
-            <marker date="1494090708000" expanded="true" signature="166:306" ph="{...}" />
-            <marker date="1494090708000" expanded="true" signature="177:304" ph="{&quot;type&quot;: ActionType.CREATE_INTERVAL...}" />
-            <marker date="1494090708000" expanded="true" signature="307:359" ph="/** Removes an interval if one is already set ...*/" />
-            <marker date="1494090708000" expanded="true" signature="394:449" ph="{...}" />
-            <marker date="1494090708000" expanded="true" signature="405:447" ph="{&quot;type&quot;: ActionType.REMOVE_INTERVAL...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/boardActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding>
-            <marker date="1494972539000" expanded="true" signature="7:103" ph="..." />
-            <marker date="1494972539000" expanded="true" signature="104:458" ph="/** Creates board for game of life with providen size ...*/" />
-            <marker date="1494972539000" expanded="true" signature="494:653" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="505:651" ph="{&quot;type&quot;: ActionType.CREATE_BOARD...}" />
-            <marker date="1494972539000" expanded="true" signature="655:838" ph="/** Creates a single iteration on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="898:989" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="909:987" ph="{&quot;type&quot;: ActionType.BOARD_LIFECYCLE...}" />
-            <marker date="1494972539000" expanded="true" signature="991:1065" ph="/** Changes a signle cell on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="1106:1178" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1117:1176" ph="{&quot;type&quot;: ActionType.CELL_CHANGE...}" />
-            <marker date="1494972539000" expanded="true" signature="1207:1256" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1218:1254" ph="{&quot;type&quot;: ActionType.ADD_COLOR...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/germGrowthUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5808">
-          <caret line="304" column="90" lean-forward="false" selection-start-line="304" selection-start-column="90" selection-end-line="304" selection-end-column="90" />
-          <folding>
-            <marker date="1495141504000" expanded="true" signature="7:67" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="69:408" ph="/** Makes a one iteration of Conwell's game ...*/" />
-            <marker date="1495141504000" expanded="true" signature="462:1338" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="558:1042" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="584:626" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="585:626" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="657:703" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="658:703" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="731:775" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="732:775" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="804:849" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="805:849" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="877:921" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="878:921" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="950:995" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="951:995" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1008:1038" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="1009:1038" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1227:1314" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1340:1570" ph="/** Fetches cells - non-periodic ...*/" />
-            <marker date="1495141504000" expanded="true" signature="1613:1764" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1766:1991" ph="/** Fetches cell - periodic ...*/" />
-            <marker date="1495141504000" expanded="true" signature="2042:2298" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="2300:2617" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="2683:3268" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="2755:3071" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="3111:3265" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="3163:3261" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="3270:3677" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="3734:3801" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="3803:4120" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="4198:4610" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="4270:4422" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="4453:4607" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="4505:4603" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="4612:5025" ph="/** Core function counting neighbours and recycling cell based on Von Neumann rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="5093:5158" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="5160:5477" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="5545:6002" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="5617:5814" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="5845:5999" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="5897:5995" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="6004:6420" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Left rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="6486:6548" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="6550:6867" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="6936:7393" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7008:7205" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="7236:7390" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7288:7386" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7395:7812" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Right rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="7879:7942" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7944:8362" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Random rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="8428:8576" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="8577:8894" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="8964:9458" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9036:9270" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="9301:9455" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9353:9451" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9461:9778" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="9847:10341" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9919:10153" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="10184:10338" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="10236:10334" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="10344:10762" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Random rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="10829:10979" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/generateUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="97" column="2" lean-forward="false" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/generateUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="60" column="87" lean-forward="false" selection-start-line="60" selection-start-column="87" selection-end-line="60" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/lifecycleUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <marker date="1494960013000" expanded="true" signature="46:385" ph="/** Makes a one iteration of Conwell's game ...*/" />
-            <marker date="1494960013000" expanded="true" signature="439:881" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="535:759" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="561:604" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="562:604" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="635:682" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="636:682" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="710:755" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="711:755" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="883:1114" ph="/** Fetches cells - non-periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1156:1301" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1303:1529" ph="/** Fetches cell - periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1579:1848" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1850:2167" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="2233:2624" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="2306:2622" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="2626:3087" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3157:3419" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3279:3359" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3365:3417" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3421:3738" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3809:4036" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3882:4034" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="4038:4421" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="4476:4737" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4597:4677" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4683:4735" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4740:5057" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5125:5397" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5198:5395" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="5399:5782" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5835:6093" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5953:6033" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="6039:6091" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/lifecycleUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <marker date="1494960013000" expanded="true" signature="46:385" ph="/** Makes a one iteration of Conwell's game ...*/" />
-            <marker date="1494960013000" expanded="true" signature="439:881" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="535:759" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="561:604" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="562:604" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="635:682" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="636:682" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="710:755" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="711:755" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="883:1114" ph="/** Fetches cells - non-periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1156:1301" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1303:1529" ph="/** Fetches cell - periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1579:1848" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1850:2167" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="2233:2624" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="2306:2622" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="2626:3087" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3157:3419" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3279:3359" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3365:3417" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3421:3738" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3809:4036" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3882:4034" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="4038:4421" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="4476:4737" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4597:4677" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4683:4735" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4740:5057" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5125:5397" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5198:5395" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="5399:5782" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5835:6093" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5953:6033" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="6039:6091" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/Settings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <marker date="1495053576000" expanded="true" signature="15:430" ph="{&quot;RANDOM_BOARD&quot;: 'RANDOM_BOARD'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -838,42 +678,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <marker date="1494960013000" expanded="true" signature="46:385" ph="/** Makes a one iteration of Conwell's game ...*/" />
-            <marker date="1494960013000" expanded="true" signature="439:881" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="535:759" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="561:604" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="562:604" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="635:682" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="636:682" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="710:755" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="711:755" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="883:1114" ph="/** Fetches cells - non-periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1156:1301" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1303:1529" ph="/** Fetches cell - periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1579:1848" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1850:2167" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="2233:2624" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="2306:2622" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="2626:3087" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3157:3419" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3279:3359" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3365:3417" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3421:3738" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3809:4036" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3882:4034" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="4038:4421" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="4476:4737" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4597:4677" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4683:4735" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4740:5057" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5125:5397" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5198:5395" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="5399:5782" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5835:6093" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5953:6033" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="6039:6091" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -881,9 +686,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <marker date="1495053576000" expanded="true" signature="15:430" ph="{&quot;RANDOM_BOARD&quot;: 'RANDOM_BOARD'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -892,18 +695,7 @@
         <state relative-caret-position="184">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1494972539000" expanded="true" signature="7:103" ph="..." />
-            <marker date="1494972539000" expanded="true" signature="104:458" ph="/** Creates board for game of life with providen size ...*/" />
-            <marker date="1494972539000" expanded="true" signature="494:653" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="505:651" ph="{&quot;type&quot;: ActionType.CREATE_BOARD...}" />
-            <marker date="1494972539000" expanded="true" signature="655:838" ph="/** Creates a single iteration on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="898:989" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="909:987" ph="{&quot;type&quot;: ActionType.BOARD_LIFECYCLE...}" />
-            <marker date="1494972539000" expanded="true" signature="991:1065" ph="/** Changes a signle cell on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="1106:1178" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1117:1176" ph="{&quot;type&quot;: ActionType.CELL_CHANGE...}" />
-            <marker date="1494972539000" expanded="true" signature="1207:1256" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1218:1254" ph="{&quot;type&quot;: ActionType.ADD_COLOR...}" />
+            <element signature="e#0#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -923,18 +715,7 @@
         <state relative-caret-position="483">
           <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding>
-            <marker date="1494972539000" expanded="true" signature="7:103" ph="..." />
-            <marker date="1494972539000" expanded="true" signature="104:458" ph="/** Creates board for game of life with providen size ...*/" />
-            <marker date="1494972539000" expanded="true" signature="494:653" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="505:651" ph="{&quot;type&quot;: ActionType.CREATE_BOARD...}" />
-            <marker date="1494972539000" expanded="true" signature="655:838" ph="/** Creates a single iteration on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="898:989" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="909:987" ph="{&quot;type&quot;: ActionType.BOARD_LIFECYCLE...}" />
-            <marker date="1494972539000" expanded="true" signature="991:1065" ph="/** Changes a signle cell on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="1106:1178" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1117:1176" ph="{&quot;type&quot;: ActionType.CELL_CHANGE...}" />
-            <marker date="1494972539000" expanded="true" signature="1207:1256" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1218:1254" ph="{&quot;type&quot;: ActionType.ADD_COLOR...}" />
+            <element signature="e#0#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -957,29 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <marker date="1495141799000" expanded="false" signature="7:450" ph="..." />
-            <marker date="1495141799000" expanded="true" signature="480:1374" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="508:545" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="559:1372" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="580:1362" ph="&lt;div/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="610:1232" ph="&lt;div/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="804:896" ph="&lt;button/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="827:880" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="907:1217" ph="&lt;button/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="930:1199" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="980:1187" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1440:1507" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1451:1505" ph="{&quot;board&quot;: board...}" />
-            <marker date="1495141799000" expanded="true" signature="1550:2089" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1561:2087" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1608:1673" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1708:1765" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1800:1847" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1897:1959" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1987:2027" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="2049:2083" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,26 +784,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1493813999000" expanded="true" signature="362:2700" ph="..." />
-            <marker date="1493813999000" expanded="true" signature="476:2693" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.test.js" />
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="253">
             <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1089,63 +845,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BoardRow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
-          <folding>
-            <marker date="1495050573000" expanded="false" signature="7:61" ph="..." />
-            <marker date="1495050573000" expanded="true" signature="267:547" ph="&lt;tr/&gt;" />
-            <marker date="1495050573000" expanded="true" signature="303:537" ph="{...}" />
-            <marker date="1495050573000" expanded="true" signature="328:523" ph="&lt;td/&gt;" />
-            <marker date="1495050573000" expanded="true" signature="613:666" ph="{&quot;row&quot;: array...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Board.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <marker date="1495049332000" expanded="true" signature="7:95" ph="..." />
-            <marker date="1495049332000" expanded="true" signature="173:460" ph="&lt;table/&gt;" />
-            <marker date="1495049332000" expanded="true" signature="200:301" ph="{...}" />
-            <marker date="1495049332000" expanded="true" signature="308:449" ph="&lt;tbody/&gt;" />
-            <marker date="1495049332000" expanded="true" signature="515:559" ph="{&quot;createBoard&quot;: array...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/animationActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <marker date="1494090708000" expanded="true" signature="49:109" ph="/** Creates board for game of life with providen size ...*/" />
-            <marker date="1494090708000" expanded="true" signature="166:306" ph="{...}" />
-            <marker date="1494090708000" expanded="true" signature="177:304" ph="{&quot;type&quot;: ActionType.CREATE_INTERVAL...}" />
-            <marker date="1494090708000" expanded="true" signature="307:359" ph="/** Removes an interval if one is already set ...*/" />
-            <marker date="1494090708000" expanded="true" signature="394:449" ph="{...}" />
-            <marker date="1494090708000" expanded="true" signature="405:447" ph="{&quot;type&quot;: ActionType.REMOVE_INTERVAL...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/ActionType.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <marker date="1494969878000" expanded="true" signature="15:308" ph="{&quot;CREATE_BOARD&quot;: 'CREATE_BOARD'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,95 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1495138239000" expanded="true" signature="5:62" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1495140823000" expanded="true" signature="5:102" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="5:104" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="118:187" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="200:225" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="237:327" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="333:416" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="443:546" ph="..." />
-            <marker date="1495140823000" expanded="true" signature="454:494" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="502:544" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="554:616" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="625:665" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="673:711" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="719:753" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="762:842" ph="{...}" />
-            <marker date="1495140823000" expanded="true" signature="841:842" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/lifecycleUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="96" column="10" lean-forward="true" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
-          <folding>
-            <marker date="1494960013000" expanded="true" signature="46:385" ph="/** Makes a one iteration of Conwell's game ...*/" />
-            <marker date="1494960013000" expanded="true" signature="439:881" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="535:759" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="561:604" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="562:604" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="635:682" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="636:682" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="710:755" ph="..." />
-            <marker date="1494960013000" expanded="true" signature="711:755" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="883:1114" ph="/** Fetches cells - non-periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1156:1301" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1303:1529" ph="/** Fetches cell - periodic ...*/" />
-            <marker date="1494960013000" expanded="true" signature="1579:1848" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="1850:2167" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="2233:2624" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="2306:2622" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="2626:3087" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3157:3419" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3279:3359" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3365:3417" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3421:3738" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="3809:4036" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="3882:4034" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="4038:4421" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="4476:4737" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4597:4677" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4683:4735" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="4740:5057" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5125:5397" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5198:5395" ph="[...]" />
-            <marker date="1494960013000" expanded="true" signature="5399:5782" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1494960013000" expanded="true" signature="5835:6093" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="5953:6033" ph="{...}" />
-            <marker date="1494960013000" expanded="true" signature="6039:6091" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/animationReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <marker date="1494090223000" expanded="true" signature="71:118" ph="{&quot;interval&quot;: undefined...}" />
-            <marker date="1494090223000" expanded="true" signature="174:540" ph="{...}" />
-            <marker date="1494090223000" expanded="true" signature="199:538" ph="{...}" />
-            <marker date="1494090223000" expanded="true" signature="237:345" ph="..." />
-            <marker date="1494090223000" expanded="true" signature="238:345" ph="{...}" />
-            <marker date="1494090223000" expanded="true" signature="253:339" ph="{&quot;interval&quot;: action.interval...}" />
-            <marker date="1494090223000" expanded="true" signature="382:495" ph="..." />
-            <marker date="1494090223000" expanded="true" signature="383:495" ph="{...}" />
-            <marker date="1494090223000" expanded="true" signature="434:489" ph="{&quot;interval&quot;: undefined...}" />
-            <marker date="1494090223000" expanded="true" signature="508:534" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,215 +864,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <marker date="1495053576000" expanded="true" signature="15:430" ph="{&quot;RANDOM_BOARD&quot;: 'RANDOM_BOARD'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/handleBoardCreate.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <marker date="1495141065000" expanded="false" signature="7:147" ph="..." />
-            <marker date="1495141065000" expanded="true" signature="149:549" ph="/** Manages data given in a form and creates lifecycle routine ...*/" />
-            <marker date="1495141065000" expanded="true" signature="608:744" ph="{...}" />
-            <marker date="1495141065000" expanded="true" signature="658:710" ph="{&quot;type&quot;: ActionType.SET_SETTING...}" />
-            <marker date="1495141065000" expanded="true" signature="776:1011" ph="{...}" />
-            <marker date="1495141065000" expanded="true" signature="807:1009" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/settingsReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <marker date="1495141138000" expanded="false" signature="7:149" ph="..." />
-            <marker date="1495141138000" expanded="true" signature="172:330" ph="{&quot;gameType&quot;: Settings.GAME_OF_LIFE...}" />
-            <marker date="1495141138000" expanded="true" signature="386:695" ph="{...}" />
-            <marker date="1495141138000" expanded="true" signature="411:693" ph="{...}" />
-            <marker date="1495141138000" expanded="true" signature="445:517" ph="..." />
-            <marker date="1495141138000" expanded="true" signature="446:517" ph="{...}" />
-            <marker date="1495141138000" expanded="true" signature="461:511" ph="{...}" />
-            <marker date="1495141138000" expanded="true" signature="548:650" ph="..." />
-            <marker date="1495141138000" expanded="true" signature="549:650" ph="{...}" />
-            <marker date="1495141138000" expanded="true" signature="564:644" ph="{...}" />
-            <marker date="1495141138000" expanded="true" signature="663:689" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/boardActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <marker date="1494972539000" expanded="true" signature="7:103" ph="..." />
-            <marker date="1494972539000" expanded="true" signature="104:458" ph="/** Creates board for game of life with providen size ...*/" />
-            <marker date="1494972539000" expanded="true" signature="494:653" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="505:651" ph="{&quot;type&quot;: ActionType.CREATE_BOARD...}" />
-            <marker date="1494972539000" expanded="true" signature="655:838" ph="/** Creates a single iteration on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="898:989" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="909:987" ph="{&quot;type&quot;: ActionType.BOARD_LIFECYCLE...}" />
-            <marker date="1494972539000" expanded="true" signature="991:1065" ph="/** Changes a signle cell on a board ...*/" />
-            <marker date="1494972539000" expanded="true" signature="1106:1178" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1117:1176" ph="{&quot;type&quot;: ActionType.CELL_CHANGE...}" />
-            <marker date="1494972539000" expanded="true" signature="1207:1256" ph="{...}" />
-            <marker date="1494972539000" expanded="true" signature="1218:1254" ph="{&quot;type&quot;: ActionType.ADD_COLOR...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
-          <folding>
-            <marker date="1495141799000" expanded="false" signature="7:450" ph="..." />
-            <marker date="1495141799000" expanded="true" signature="480:1374" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="508:545" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="559:1372" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="580:1362" ph="&lt;div/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="610:1232" ph="&lt;div/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="804:896" ph="&lt;button/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="827:880" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="907:1217" ph="&lt;button/&gt;" />
-            <marker date="1495141799000" expanded="true" signature="930:1199" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="980:1187" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1440:1507" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1451:1505" ph="{&quot;board&quot;: board...}" />
-            <marker date="1495141799000" expanded="true" signature="1550:2089" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1561:2087" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1608:1673" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1708:1765" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1800:1847" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1897:1959" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="1987:2027" ph="{...}" />
-            <marker date="1495141799000" expanded="true" signature="2049:2083" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/boardReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <marker date="1495141567000" expanded="true" signature="7:71" ph="..." />
-            <marker date="1495141567000" expanded="true" signature="138:244" ph="..." />
-            <marker date="1495141567000" expanded="true" signature="267:391" ph="[...]" />
-            <marker date="1495141567000" expanded="true" signature="447:977" ph="{...}" />
-            <marker date="1495141567000" expanded="true" signature="472:975" ph="{...}" />
-            <marker date="1495141567000" expanded="true" signature="507:564" ph="..." />
-            <marker date="1495141567000" expanded="true" signature="508:564" ph="{...}" />
-            <marker date="1495141567000" expanded="true" signature="523:558" ph="[...]" />
-            <marker date="1495141567000" expanded="true" signature="601:689" ph="..." />
-            <marker date="1495141567000" expanded="true" signature="602:689" ph="{...}" />
-            <marker date="1495141567000" expanded="true" signature="617:683" ph="[...]" />
-            <marker date="1495141567000" expanded="true" signature="722:934" ph="..." />
-            <marker date="1495141567000" expanded="true" signature="723:934" ph="{...}" />
-            <marker date="1495141567000" expanded="true" signature="902:928" ph="[...]" />
-            <marker date="1495141567000" expanded="true" signature="947:971" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/germGrowthUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <marker date="1495141504000" expanded="true" signature="7:67" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="69:408" ph="/** Makes a one iteration of Conwell's game ...*/" />
-            <marker date="1495141504000" expanded="true" signature="462:1338" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="558:1042" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="584:626" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="585:626" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="657:703" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="658:703" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="731:775" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="732:775" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="804:849" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="805:849" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="877:921" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="878:921" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="950:995" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="951:995" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1008:1038" ph="..." />
-            <marker date="1495141504000" expanded="true" signature="1009:1038" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1227:1314" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1340:1570" ph="/** Fetches cells - non-periodic ...*/" />
-            <marker date="1495141504000" expanded="true" signature="1613:1764" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="1766:1991" ph="/** Fetches cell - periodic ...*/" />
-            <marker date="1495141504000" expanded="true" signature="2042:2298" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="2300:2617" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="2683:3268" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="2755:3071" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="3111:3265" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="3163:3261" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="3270:3677" ph="/** Core function counting neighbours and recycling cell based on Moore rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="3734:3801" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="3803:4120" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="4198:4610" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="4270:4422" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="4453:4607" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="4505:4603" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="4612:5025" ph="/** Core function counting neighbours and recycling cell based on Von Neumann rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="5093:5158" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="5160:5477" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="5545:6002" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="5617:5814" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="5845:5999" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="5897:5995" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="6004:6420" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Left rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="6486:6548" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="6550:6867" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="6936:7393" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7008:7205" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="7236:7390" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7288:7386" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7395:7812" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Right rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="7879:7942" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="7944:8362" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Random rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="8428:8576" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="8577:8894" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="8964:9458" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9036:9270" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="9301:9455" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9353:9451" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9461:9778" ph="/** Creates array of neighbours for a cell ...*/" />
-            <marker date="1495141504000" expanded="true" signature="9847:10341" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="9919:10153" ph="[...]" />
-            <marker date="1495141504000" expanded="true" signature="10184:10338" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="10236:10334" ph="{...}" />
-            <marker date="1495141504000" expanded="true" signature="10344:10762" ph="/** Core function counting neighbours and recycling cell based on Hexagonal Random rule ...*/" />
-            <marker date="1495141504000" expanded="true" signature="10829:10979" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/CreateBoard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-          <folding>
-            <marker date="1495141163000" expanded="true" signature="7:190" ph="..." />
-            <marker date="1495141163000" expanded="true" signature="214:393" ph="{&quot;gameType&quot;: Settings.GAME_OF_LIFE...}" />
-            <marker date="1495141163000" expanded="true" signature="450:2064" ph="&lt;form/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="485:1078" ph="&lt;div/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="568:1067" ph="&lt;div/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="582:1054" ph="&lt;Field/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="1084:1565" ph="&lt;div/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="1178:1554" ph="&lt;div/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="1192:1541" ph="&lt;Field/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="1571:1749" ph="&lt;div/&gt;" />
-            <marker date="1495141163000" expanded="true" signature="2118:2163" ph="{&quot;createBoard&quot;: func...}" />
-            <marker date="1495141163000" expanded="true" signature="2189:2214" ph="{&quot;form&quot;: 'boardCreate'...}" />
-            <marker date="1495141163000" expanded="true" signature="2262:2289" ph="{&quot;initialValues&quot;: initialValues...}" />
-          </folding>
+        <state relative-caret-position="230">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1465,16 +880,205 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BoardRow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/settingsReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/animationActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <marker date="1494100179000" expanded="true" signature="49:100" ph="{...}" />
+            <marker date="1495298783000" expanded="true" signature="5:102" ph="{...}" />
+            <marker date="1495298783000" expanded="true" signature="606:607" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/boardActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/lifecycleUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/generateTypes/clearBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/generateTypes/basicCell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/generateTypes/evenBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/generateTypes/randomBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/generateTypes/randomRadiusBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/lifeType/getCell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/lifeType/pent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/lifeType/hex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="63" column="44" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/lifeType/vonNeumann.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/lifeType/moore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/handleBoardCreate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/generateUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="84" column="34" lean-forward="true" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+        <state relative-caret-position="460">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/germGrowthUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="45" column="3" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/animationReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/boardReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-554">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/CreateBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding />
         </state>
       </provider>

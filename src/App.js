@@ -1,49 +1,59 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
-import { createBoard, boardLifecycleAction, cellChange, addColor } from './actions/boardActions'
+import './App.css'
 import { makeInterval, removeInterval } from './actions/animationActions'
-
-import CreateBoard from './containers/CreateBoard'
+import { boardLifecycleAction, cellChange, } from './actions/boardActions'
 import Board from './components/Board'
-
+import CreateBoard from './containers/CreateBoard'
 import handleBoardCreate from './utils/handleBoardCreate'
 
-import logo from './logo.svg'
-import './App.css'
-
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      formVisibility: true
+    }
+  }
   componentWillUnmount () {
     this.props.removeInterval()
+  }
+
+  setInterval = () => {
+    if (!this.props.animation.interval) {
+      this.setState({
+        formVisibility: false
+      })
+      this.props.makeInterval(
+        () => this.props.boardLifecycle(this.props.board, this.props.form.boardCreate.values),
+        200)
+    }
   }
 
   render () {
     return (
       <div className="App">
         <div className="App-header">
-          <img onClick={this.props.addColor} src={logo} className="App-logo" alt="logo"/>
-          <CreateBoard onSubmit={this.props.handleBoardCreate}/>
+          <CreateBoard
+            isVisible={this.state.formVisibility}
+            onSubmit={this.props.handleBoardCreate}/>
           <button onClick={() => {
+            this.setState({
+              formVisibility: true
+            })
             this.props.removeInterval()
-          }}>Stop </button>
-          <button onClick={() => {
-            if (!this.props.animation.interval) {
-              console.log(this.props.form.boardCreate.values)
-              this.props.makeInterval(() => this.props.boardLifecycle(this.props.board, this.props.form.boardCreate.values), 500)
-            }
-          }}> Start </button>
+          }}>Stop</button>
+          <button onClick={this.setInterval}> Start</button>
         </div>
-        <Board colors={this.props.settings.colors} cellChange={this.props.cellChange} boardData={this.props.board}/>
+        <Board cellChange={this.props.cellChange} boardData={this.props.board}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({board, animation, settings, form}) => {
+const mapStateToProps = ({board, animation, form}) => {
   return {
     board,
     animation,
-    settings,
     form
   }
 }
@@ -64,9 +74,6 @@ const mapDispatchToProps = (dispatch) => {
     },
     removeInterval: () => {
       dispatch(removeInterval())
-    },
-    addColor: () => {
-      dispatch(addColor())
     }
   }
 }

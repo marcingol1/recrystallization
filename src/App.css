@@ -4,35 +4,24 @@
     align-items: center;
     text-align: center;
 }
-
 .App-header {
     display: flex;
     flex-direction: column;
     padding: 30px;
 }
-
 .App-intro {
     font-size: large;
 }
 
-.App-logo {
-    padding: 10px;
-    animation: App-logo-spin infinite 20s linear;
-    height: 50px;
-}
 form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
+button {
+    margin: 5px 0;
+    padding: 10px;
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 table {
@@ -40,22 +29,13 @@ table {
     border-spacing: 0;
     padding: 0;
 }
-
-button {
-    margin: 5px;
-    padding: 10px;
-
-}
-
 .cell {
     width: 10px;
     height: 10px;
 }
-
 .dead {
     background-color: #1AA59A;
 }
-
 .alive {
     transition: background-color 0.1s linear;
     background-color: #A6ED8E;
