@@ -7,9 +7,12 @@
  * @returns {Array} - 0 or 1 from boardData
  */
 export function getCell (boardData, row, column) {
-  if (row < 0 || column < 0) return [0, 0] // h
-  if (row === boardData.length || column === boardData.length) return [0, 0]
-  return [row, column]
+  let tempRow = row, tempCol = column
+  if (row < 0) tempRow = 0
+  if (column < 0) tempCol = 0
+  if (row === boardData.length) tempRow = boardData.length - 1
+  if (column === boardData.length) tempCol = boardData.length - 1
+  return [tempRow, tempCol]
 }
 
 /**

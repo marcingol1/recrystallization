@@ -5,7 +5,6 @@ import { Field, reduxForm } from 'redux-form'
 import Settings from '../constants/Settings'
 
 const initialValues = {
-  gameType: Settings.GERM_EXPANSION,
   neighbourhoodType: Settings.MOORE,
   distributionType: Settings.CLEAR_BOARD,
   borderCondition: true,
@@ -13,26 +12,12 @@ const initialValues = {
   pointsQuantity: 5
 }
 
-let CreateBoard = ({createBoard, handleSubmit, isVisible}) => (
-  <form
-    style={{
-      display: isVisible ? 'flex' : 'none'
-    }}
-    onSubmit={handleSubmit}>
-    <div id="game-type">
-      <label>Choose type of gameplay</label>
-      <div>
-        <Field name="gameType" component="select">
-          <option value={Settings.GERM_EXPANSION}>Recrystalization</option>
-          <option value={Settings.GAME_OF_LIFE}>Game of life</option>
-        </Field>
-      </div>
-    </div>
+let CreateBoard = ({createBoard, handleSubmit}) => (
+  <form onSubmit={handleSubmit}>
 
-
-    <div id="neighbourhood-type">
-      <label>Choose neighbourhood type</label>
-      <div>
+    <div className="form-part">
+      <div id="neighbourhood-type">
+        <label>Neighbours</label>
         <Field name="neighbourhoodType" component="select">
           <option value={Settings.MOORE}>Moore</option>
           <option value={Settings.VON_NEUMANN}>Von Neumann</option>
@@ -42,11 +27,9 @@ let CreateBoard = ({createBoard, handleSubmit, isVisible}) => (
           <option value={Settings.PENT_RAND}>Pentagonal Random</option>
         </Field>
       </div>
-    </div>
 
-    <div id="generating-germs">
-      <label>Choose type of distribution on a board</label>
-      <div>
+      <div id="generating-germs">
+        <label>Distribution</label>
         <Field name="distributionType" component="select">
           <option value={Settings.RANDOM_BOARD}>Randomly</option>
           <option value={Settings.CLEAR_BOARD}>Clear</option>
@@ -56,19 +39,25 @@ let CreateBoard = ({createBoard, handleSubmit, isVisible}) => (
       </div>
     </div>
 
-    <div id="border-condition">
-      <label htmlFor="border">Border condition</label>
-      <Field name="borderCondition" id="border" component="input" type="checkbox"/>
+    <div className="form-part">
+      <div>
+      <label htmlFor="points-quantity">Points number</label>
+      <Field name="pointsQuantity" component="input" type="text"/>
+      </div>
+      <div>
+      <label htmlFor="board-size">Board size</label>
+      <Field name="boardSize" component="input" type="text"/>
+      </div>
     </div>
 
-    <label htmlFor="points-quantity">Enter points quantity</label>
-    <Field name="pointsQuantity" component="input" type="text"/>
+    <div className="form-part">
+      <div id="border-condition">
+        <label htmlFor="border">Border condition</label>
+        <Field name="borderCondition" id="border" component="input" type="checkbox"/>
+      </div>
+      <button type="submit">Create</button>
+    </div>
 
-    <label htmlFor="board-size">Enter board size</label>
-    <Field name="boardSize" component="input" type="text"/>
-
-
-    <button type="submit">Create</button>
   </form>
 )
 

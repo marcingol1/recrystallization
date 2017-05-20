@@ -1,9 +1,3 @@
-.App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 .App-header {
     display: flex;
     flex-direction: column;
@@ -21,7 +15,17 @@ form {
 button {
     margin: 5px 0;
     padding: 10px;
-
+}
+label {
+    padding: 3px;
+}
+.form-part {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+.form-part label {
+    display: inline-block;
 }
 
 table {

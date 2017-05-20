@@ -8,21 +8,12 @@ import CreateBoard from './containers/CreateBoard'
 import handleBoardCreate from './utils/handleBoardCreate'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      formVisibility: true
-    }
-  }
   componentWillUnmount () {
     this.props.removeInterval()
   }
 
   setInterval = () => {
     if (!this.props.animation.interval) {
-      this.setState({
-        formVisibility: false
-      })
       this.props.makeInterval(
         () => this.props.boardLifecycle(this.props.board, this.props.form.boardCreate.values),
         200)
@@ -33,9 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <CreateBoard
-            isVisible={this.state.formVisibility}
-            onSubmit={this.props.handleBoardCreate}/>
+          <CreateBoard onSubmit={this.props.handleBoardCreate}/>
           <button onClick={() => {
             this.setState({
               formVisibility: true

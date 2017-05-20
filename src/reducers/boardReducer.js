@@ -1,9 +1,7 @@
 import _ from 'lodash'
 import ActionType from '../constants/ActionType'
-import { boardLifecycleGame } from '../utils/lifecycleUtils'
 import { boardLifecycle } from '../utils/germGrowthUtils'
 import { getRandomColor } from '../utils/generateTypes/basicCell'
-import Settings from '../constants/Settings'
 
 const initialState = [
   [{ value: 0, color: '#000' }, { value: 1, color: '#000'}],
@@ -18,7 +16,7 @@ export default (state = initialState, action = {}) => {
         ]
     }
     case ActionType.BOARD_LIFECYCLE: {
-      let fun = action.settings.gameType === Settings.GERM_EXPANSION ? boardLifecycle : boardLifecycleGame
+      let fun = boardLifecycle
       return [
         ...fun(action.board, action.settings)
       ]
