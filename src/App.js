@@ -6,6 +6,7 @@ import { boardLifecycleAction, cellChange, } from './actions/boardActions'
 import Board from './components/Board'
 import CreateBoard from './containers/CreateBoard'
 import handleBoardCreate from './utils/handleBoardCreate'
+import getData from './utils/data/getData'
 
 class App extends Component {
   componentWillUnmount () {
@@ -32,6 +33,7 @@ class App extends Component {
             this.props.removeInterval()
           }}>Stop</button>
           <button onClick={this.setInterval}> Start</button>
+          <button onClick={getData}>Click me</button>
         </div>
         <Board cellChange={this.props.cellChange} boardData={this.props.board}/>
       </div>

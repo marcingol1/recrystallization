@@ -19,6 +19,7 @@ function setNeighboursVonNeumann (boardData, row, column, ifPeriodic = true) {
     if (!boardData[element[0]][element[1]].color) {
       boardData[element[0]][element[1]] = { value: 1, color: boardData[row][column].color}
     }
+    return element
   })
 }
 

@@ -1,7 +1,19 @@
 import { createBoard } from '../actions/boardActions'
 import ActionType from '../constants/ActionType'
 import Settings from '../constants/Settings'
-
+/**
+ * Modifies form data providing default values
+ * @param form - data to modify
+ * @returns {{boardSize: (Number|number), distributionType: string, neighbourhoodType: string}}
+ */
+const extractData = (form) => {
+  return {
+    ...form,
+    boardSize: parseInt(form.boardSize, 10) || 60,
+    distributionType: form.distributionType || Settings.CLEAR_BOARD,
+    neighbourhoodType: form.neighbourhoodType || Settings.MOORE
+  }
+}
 /**
  * Manages data given in a form and creates lifecycle routine
  * @param form {Object} - data for simulation
@@ -21,11 +33,3 @@ export default function handleBoardCreate(form, dispatch) {
   return createBoard(formData)
 }
 
-const extractData = (form) => {
-  return {
-    ...form,
-    boardSize: parseInt(form.boardSize, 10) || 60,
-    distributionType: form.distributionType || Settings.CLEAR_BOARD,
-    neighbourhoodType: form.neighbourhoodType || Settings.MOORE
-  }
-}

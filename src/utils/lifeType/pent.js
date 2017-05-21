@@ -24,6 +24,7 @@ function setNeighboursPentRight (boardData, row, column, ifPeriodic) {
         color: boardData[row][column].color
       }
     }
+    return element
   })
 }
 
@@ -52,6 +53,7 @@ function setNeighboursPentLeft (boardData, row, column, ifPeriodic) {
         color: boardData[row][column].color
       }
     }
+    return element
   })
 }
 
