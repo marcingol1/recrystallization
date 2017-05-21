@@ -1,3 +1,7 @@
+body {
+    background-color: #243129;
+    color: #ffffff;
+}
 .App-header {
     display: flex;
     flex-direction: column;
@@ -13,8 +17,11 @@ form {
     justify-content: flex-start;
 }
 button {
-    margin: 5px 0;
     padding: 10px;
+    width: 15%;
+}
+.App-header > button {
+    margin: 5px auto;
 }
 label {
     padding: 3px;
@@ -30,7 +37,6 @@ label {
 
 table {
     margin: 0 auto;
-    border-spacing: 0;
     padding: 0;
 }
 .cell {
@@ -43,4 +49,7 @@ table {
 .alive {
     transition: background-color 0.1s linear;
     background-color: #A6ED8E;
+}
+.crystal {
+    border-radius: 5px;
 }

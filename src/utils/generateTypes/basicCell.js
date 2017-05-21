@@ -18,7 +18,8 @@ export function getRandomColor() {
  */
 const basicCell = (value = Math.round(Math.random())) => ({
     value,
-    color: value ? getRandomColor() : 0
+    color: value ? getRandomColor() : 0,
+    dys: 0
   }
 )
 

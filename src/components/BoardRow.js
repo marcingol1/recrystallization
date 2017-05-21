@@ -1,7 +1,11 @@
 import React  from 'react'
 import PropTypes from 'prop-types'
 
-const generateClassName = (cell) => cell.value ? 'cell alive' : 'cell dead'
+const generateClassName = (cell) => {
+  let style = cell.value ? 'cell alive' : 'cell dead'
+  if (cell.dys > 1709912254) style += ' crystal'
+  return style;
+}
 const generateColor = (cell) => cell.value ? {backgroundColor: cell.color} : {}
 const BoardRow = ({row = [], index = 0}) => (
   <tr>

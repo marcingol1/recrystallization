@@ -4,8 +4,8 @@ import { boardLifecycle } from '../utils/germGrowthUtils'
 import { getRandomColor } from '../utils/generateTypes/basicCell'
 
 const initialState = [
-  [{ value: 0, color: '#000' }, { value: 1, color: '#000'}],
-  [{ value: 0, color: '#000' }, { value: 1, color: '#000'}]
+  [{value: 0, color: '#000', dys: '0'}, {value: 1, color: '#000', dys: '0'}],
+  [{value: 0, color: '#000', dys: '0'}, {value: 1, color: '#000', dys: '0'}]
 ]
 
 export default (state = initialState, action = {}) => {
@@ -13,7 +13,7 @@ export default (state = initialState, action = {}) => {
     case ActionType.CREATE_BOARD: {
       return [
         ...action.board
-        ]
+      ]
     }
     case ActionType.BOARD_LIFECYCLE: {
       let fun = boardLifecycle
@@ -23,7 +23,7 @@ export default (state = initialState, action = {}) => {
     }
     case ActionType.CELL_CHANGE: {
       let clone = _.cloneDeep(state), obj = state[action.row][action.column]
-      clone[action.row][action.column] = { value: !obj.value, color: getRandomColor()}
+      clone[action.row][action.column] = {value: !obj.value, color: getRandomColor()}
       return [
         ...clone
       ]

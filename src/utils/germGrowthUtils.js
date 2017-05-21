@@ -4,6 +4,7 @@ import mooreRule from './lifeType/moore'
 import vonNeumanRule from './lifeType/vonNeumann'
 import { hexLeftRule, hexRightRule, hexRandRule } from './lifeType/hex'
 import pentRandRule from './lifeType/pent'
+import getData from './data/getData'
 /**
  * Makes a one iteration of Conwell's game
  * Changes cells to alive/dead depending on neighbours
@@ -47,8 +48,12 @@ export function boardLifecycle (boardData, settings) {
   //Need to create a copy for a distinction between actual state and new state
   let tempBoard = _.cloneDeep(boardData)
   boardData.map((rowData, row) => rowData.map((cell, column) => {
-      if (cell.value) fun(tempBoard, row, column, ifPeriodic)
+      if (cell.value) {
+        fun(tempBoard, row, column, ifPeriodic)
+      }
       return cell
     }))
+  const data = getData()
+
   return tempBoard;
 }

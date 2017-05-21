@@ -1,4 +1,6 @@
 import { getCellPeriodic, getCell } from './getCell'
+import setCell from './setCell'
+import setDys from './../data/setDyslocation'
 
 /**
  * Creates array of neighbours for a cell
@@ -21,13 +23,19 @@ function setNeighboursMoore (boardData, row, column, ifPeriodic) {
     fun(boardData, row + 1, column + 1)
   ]
 
-
-  return neighbours.map((element) => {
+  neighbours = neighbours.map((element) => {
     if (!boardData[element[0]][element[1]].color) {
-      boardData[element[0]][element[1]] = { value: 1, color: boardData[row][column].color}
+      boardData[element[0]][element[1]] = setCell(boardData[element[0]][element[1]], boardData[row][column])
     }
-    return element
+    return boardData[element[0]][element[1]]
   })
+  const setDysParams = {
+    germ: boardData[row][column],
+    neighbours,
+    size: boardData.length,
+    iteration: 1
+  }
+  boardData[row][column].dys = setDys(setDysParams)
 }
 
 /**

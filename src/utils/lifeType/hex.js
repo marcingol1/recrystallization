@@ -1,4 +1,5 @@
 import { getCellPeriodic, getCell } from './getCell'
+import setCell from './setCell'
 /**
  * Creates array of neighbours for a cell
  * @param boardData - stores all information about cells
@@ -18,8 +19,9 @@ function setNeighboursHexLeft (boardData, row, column, ifPeriodic) {
   ]
   neighbours.map((element) => {
     if (!boardData[element[0]][element[1]].color) {
-      boardData[element[0]][element[1]] = { value: 1, color: boardData[row][column].color}
+      boardData[element[0]][element[1]] = setCell(boardData[element[0]][element[1]], boardData[row][column])
     }
+
     return element
   })
 }
@@ -55,7 +57,7 @@ function setNeighboursHexRight (boardData, row, column, ifPeriodic) {
   ]
   neighbours.map((element) => {
     if (!boardData[element[0]][element[1]].color) {
-      boardData[element[0]][element[1]] = { value: 1, color: boardData[row][column].color}
+      boardData[element[0]][element[1]] = setCell(boardData[element[0]][element[1]], boardData[row][column])
     }
     return element
   })
