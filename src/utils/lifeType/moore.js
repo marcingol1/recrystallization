@@ -1,7 +1,6 @@
 import { getCellPeriodic, getCell } from './getCell'
 import setCell from './setCell'
 import setDys from './../data/setDyslocation'
-
 /**
  * Creates array of neighbours for a cell
  * @param boardData - stores all information about cells

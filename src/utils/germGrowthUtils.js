@@ -4,7 +4,8 @@ import mooreRule from './lifeType/moore'
 import vonNeumanRule from './lifeType/vonNeumann'
 import { hexLeftRule, hexRightRule, hexRandRule } from './lifeType/hex'
 import pentRandRule from './lifeType/pent'
-import getData from './data/getData'
+import devilsTouch from './data/devilsTouch'
+
 /**
  * Makes a one iteration of Conwell's game
  * Changes cells to alive/dead depending on neighbours
@@ -53,7 +54,7 @@ export function boardLifecycle (boardData, settings) {
       }
       return cell
     }))
-  const data = getData()
+  console.log(devilsTouch(tempBoard))
 
   return tempBoard;
 }
