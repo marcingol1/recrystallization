@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const generateClassName = (cell) => {
   let style = cell.value ? 'cell alive' : 'cell dead'
-  if (cell.dys > 1709912254) style += ' crystal'
+  if (cell.dys > 33446154147.709324) style += ' crystal'
   return style;
 }
 const generateColor = (cell) => cell.value ? {backgroundColor: cell.color} : {}

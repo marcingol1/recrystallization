@@ -5,7 +5,7 @@ import vonNeumanRule from './lifeType/vonNeumann'
 import { hexLeftRule, hexRightRule, hexRandRule } from './lifeType/hex'
 import pentRandRule from './lifeType/pent'
 import devilsTouch from './data/devilsTouch'
-
+let iteration = 0.001
 /**
  * Makes a one iteration of Conwell's game
  * Changes cells to alive/dead depending on neighbours
@@ -50,11 +50,11 @@ export function boardLifecycle (boardData, settings) {
   let tempBoard = _.cloneDeep(boardData)
   boardData.map((rowData, row) => rowData.map((cell, column) => {
       if (cell.value) {
-        fun(tempBoard, row, column, ifPeriodic)
+        fun(tempBoard, row, column, ifPeriodic, iteration)
       }
       return cell
     }))
-  console.log(devilsTouch(tempBoard))
-
+  devilsTouch(tempBoard, iteration)
+  iteration += 0.001
   return tempBoard;
 }
