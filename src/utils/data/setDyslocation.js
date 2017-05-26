@@ -1,5 +1,6 @@
 import getDensity from './getDensity'
 
+let pointRo = {value: 0, iteration: 0}
 /**
  * Provides density of dyslocations for given iteration
  * @param iteration {Number}
@@ -7,9 +8,19 @@ import getDensity from './getDensity'
  * @returns {Number} - diff of dyslocations between two iterations
  */
 export function getDeltaRo (iteration, size) {
+  const t1 = getDensity(iteration - 0.001)
+  const t2 = getDensity(iteration)
+  //might be smth wrong with this
+  if (pointRo.iteration !== iteration) {
+    pointRo.iteration = iteration
+    pointRo.value += (t2 - t1) / (size * size)
+  }
+  return pointRo.value
+}
+
+export function getCriticalRo (iteration, size) {
   const t1 = getDensity(iteration)
-  const t2 = getDensity(iteration + 1)
-  return (t2 - t1) / size //dRo
+  return getDeltaRo(iteration, size)
 }
 
 /**
@@ -20,10 +31,11 @@ export function getDeltaRo (iteration, size) {
  * @param iteration
  * @returns {number} - proper dyslocations density including border condition
  */
-function setDyslocation ({germ, neighbours, size, iteration}) {
+function getDyslocation (germ, neighbours, size, iteration) {
   const ro = getDeltaRo(iteration, size)
   const isOnBorder = neighbours.some(e => e.color !== germ.color)
-  return isOnBorder ? ro * 0.8 : ro * 0.2
+  const properRo = isOnBorder ? (ro * 0.8) : (ro * 0.2)
+  return properRo
 }
 
-export default setDyslocation
+export default getDyslocation

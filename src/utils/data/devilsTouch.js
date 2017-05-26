@@ -1,27 +1,24 @@
-import { getDeltaRo } from './setDyslocation'
-import getDensity from './getDensity'
+import { getCriticalRo } from './setDyslocation'
 
 const generateRandom = (size) => {
   return () => Math.floor(Math.random() * size)
 }
 
 export default (boardData, iteration) => {
-  const allDys = boardData.reduce((sum, board) => {
-    return sum + board.reduce((innerSum, cell) => {
-        return innerSum + parseInt(cell.dys, 10)
-      }, 0)
-  }, 0)
   const size = boardData.length
-  const cellRo = getDeltaRo(iteration, size)
-  let diff = getDensity(iteration) * size - allDys
   const rand = generateRandom(size)
-
+  const allDys = boardData
+    .reduce((a, b) => a.concat(b))
+    .reduce((acc, e) => acc + e.dys, 0)
+  const critRo = getCriticalRo(iteration, size)
+  let diff = critRo * (size * size) - allDys
+  const devil = 1000
+  const singleDevil = diff / devil
   //assign random cell on boardData += cellRo
   // until diff is 0
   while (diff > 0) {
-    boardData[rand()][rand()].dys += cellRo
-    diff -= cellRo
+    boardData[rand()][rand()].dys += singleDevil
+    diff -= singleDevil
   }
-  console.log(iteration)
   return boardData
 }

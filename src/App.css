@@ -38,6 +38,7 @@ label {
 table {
     margin: 0 auto;
     padding: 0;
+    border-spacing: 0;
 }
 .cell {
     width: 10px;
@@ -49,6 +50,9 @@ table {
 .alive {
     transition: background-color 0.1s linear;
     background-color: #A6ED8E;
+}
+.dumb {
+    border: dashed thin red;
 }
 .crystal {
     border-radius: 5px;

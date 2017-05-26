@@ -24,19 +24,12 @@ function setNeighboursMoore (boardData, row, column, ifPeriodic, iteration) {
     fun(boardData, row + 1, column + 1)
   ]
 
-  neighbours = neighbours.map((element) => {
+  neighbours.map((element) => {
     if (!boardData[element[0]][element[1]].color) {
       boardData[element[0]][element[1]] = setCell(boardData[element[0]][element[1]], boardData[row][column])
     }
     return boardData[element[0]][element[1]]
   })
-  const setDysParams = {
-    germ: boardData[row][column],
-    neighbours,
-    size: boardData.length,
-    iteration
-  }
-  boardData[row][column].dys = setDyslocation(setDysParams)
 }
 
 /**

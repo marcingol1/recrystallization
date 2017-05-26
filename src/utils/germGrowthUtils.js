@@ -1,10 +1,10 @@
 import Settings from '../constants/Settings'
 import _ from 'lodash'
+import { hexLeftRule, hexRightRule, hexRandRule } from './lifeType/hex'
 import mooreRule from './lifeType/moore'
 import vonNeumanRule from './lifeType/vonNeumann'
-import { hexLeftRule, hexRightRule, hexRandRule } from './lifeType/hex'
 import pentRandRule from './lifeType/pent'
-import devilsTouch from './data/devilsTouch'
+import crystalization from './data/crystalization'
 let iteration = 0.001
 /**
  * Makes a one iteration of Conwell's game
@@ -50,11 +50,15 @@ export function boardLifecycle (boardData, settings) {
   let tempBoard = _.cloneDeep(boardData)
   boardData.map((rowData, row) => rowData.map((cell, column) => {
       if (cell.value) {
-        fun(tempBoard, row, column, ifPeriodic, iteration)
+        fun(tempBoard, row, column, ifPeriodic)
       }
       return cell
     }))
-  devilsTouch(tempBoard, iteration)
-  iteration += 0.001
+
+  if (boardData.every( rowData => rowData.every (cell => cell.value))) {
+    tempBoard = crystalization(tempBoard, iteration)
+    iteration += 0.001
+  }
+
   return tempBoard;
 }
