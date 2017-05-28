@@ -34,7 +34,7 @@ export function getCriticalRo (iteration, size) {
 function getDyslocation (germ, neighbours, size, iteration) {
   const ro = getDeltaRo(iteration, size)
   const isOnBorder = neighbours.some(e => e.color !== germ.color)
-  const properRo = isOnBorder ? (ro * 0.8) : (ro * 0.2)
+  const properRo = isOnBorder ? (ro * 0.8) : (ro * 0.6)
   return properRo
 }
 

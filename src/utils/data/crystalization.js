@@ -14,7 +14,7 @@ function setCrystal(germ) {
   return germ
 }
 
-function getNeighbours(boardData, row, column, fun) {
+export function getNeighbours(boardData, row, column, fun) {
   return [
     fun(boardData, row - 1, column - 1),
     fun(boardData, row - 1, column),
@@ -63,7 +63,7 @@ function crystalization (boardData, iteration) {
     let lol = 100000000
     if (cell.dys > criticalRo && cell.value === 1) {
       //why cells dont stick to borders of germs?
-      //setNeighbours(boardData, row, column, fun)
+      setNeighbours(boardData, row, column, fun)
       return {
         ...cell,
         value: 2,
