@@ -1,5 +1,5 @@
 import { getCellPeriodic, getCell } from './getCell'
-import setCell from './setCell'
+import { setCell, setCrystal } from './setCell'
 import setDyslocation from './../data/setDyslocation'
 
 /**
@@ -8,10 +8,9 @@ import setDyslocation from './../data/setDyslocation'
  * @param row - row position in boardData
  * @param column - column position in boardData
  * @param ifPeriodic - flag indicationg if cells should be taken periodically
- * @param iteration
  * @returns {Array} - neighbours of a cell
  */
-function setNeighboursMoore (boardData, row, column, ifPeriodic, iteration) {
+function setNeighboursMoore (boardData, row, column, ifPeriodic) {
   let fun = ifPeriodic ? getCellPeriodic : getCell
   let neighbours = [
     fun(boardData, row - 1, column - 1),
@@ -38,9 +37,8 @@ function setNeighboursMoore (boardData, row, column, ifPeriodic, iteration) {
  * @param row - row position in boardData
  * @param column - column position in boardData
  * @param ifPeriodic - should periodic conditions be taken into consideration
- * @param iteration
  * @returns {Object} - indicates if cell is alive- if there is no change the same cell is returned
  */
-export default function mooreRule (boardData, row, column, ifPeriodic, iteration) {
-  return setNeighboursMoore(boardData, row, column, ifPeriodic, iteration)
+export default function mooreRule (boardData, row, column, ifPeriodic) {
+  return setNeighboursMoore(boardData, row, column, ifPeriodic)
 }

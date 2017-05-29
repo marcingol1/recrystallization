@@ -5,6 +5,9 @@ import mooreRule from './lifeType/moore'
 import vonNeumanRule from './lifeType/vonNeumann'
 import pentRandRule from './lifeType/pent'
 import crystalization from './data/crystalization'
+import { setCrystal } from './lifeType/setCell'
+import { getCellPeriodic, getCell } from './lifeType/getCell'
+
 let iteration = 0.001
 /**
  * Makes a one iteration of Conwell's game
@@ -49,16 +52,13 @@ export function boardLifecycle (boardData, settings) {
   //Need to create a copy for a distinction between actual state and new state
   let tempBoard = _.cloneDeep(boardData)
   boardData.map((rowData, row) => rowData.map((cell, column) => {
-      if (cell.value) {
-        fun(tempBoard, row, column, ifPeriodic)
-      }
-      return cell
-    }))
-
-  if (boardData.every( rowData => rowData.every (cell => cell.value))) {
+    if (cell.value === 1) fun(tempBoard, row, column, ifPeriodic)
+    return cell
+  }))
+  let isGrown = boardData.every(rowData => rowData.every(cell => cell.value))
+  if (isGrown) {
     tempBoard = crystalization(tempBoard, iteration)
     iteration += 0.001
   }
-
-  return tempBoard;
+  return tempBoard
 }
