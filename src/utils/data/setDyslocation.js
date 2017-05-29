@@ -13,9 +13,9 @@ export function getDeltaRo (iteration, size) {
   //might be smth wrong with this
   if (pointRo.iteration !== iteration) {
     pointRo.iteration = iteration
-    pointRo.value += (t2 - t1) / (size * size)
+    pointRo.value = (t2 - t1) / (size * size)
   }
-  return pointRo.value
+  return (t2 - t1) / (size * size)
 }
 
 export function getCriticalRo (iteration, size) {

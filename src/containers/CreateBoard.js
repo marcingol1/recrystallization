@@ -6,7 +6,7 @@ import Settings from '../constants/Settings'
 
 const initialValues = {
   neighbourhoodType: Settings.MOORE,
-  distributionType: Settings.CLEAR_BOARD,
+  distributionType: Settings.RANDOM_RADIUS_BOARD,
   borderCondition: true,
   boardSize: 40,
   pointsQuantity: 5
@@ -31,10 +31,10 @@ let CreateBoard = ({createBoard, handleSubmit}) => (
       <div id="generating-germs">
         <label>Distribution</label>
         <Field name="distributionType" component="select">
+          <option value={Settings.RANDOM_RADIUS_BOARD}>Randomly with radius</option>
           <option value={Settings.RANDOM_BOARD}>Randomly</option>
           <option value={Settings.CLEAR_BOARD}>Clear</option>
           <option value={Settings.DISTRIBUTED_BOARD}>Evenly</option>
-          <option value={Settings.RANDOM_RADIUS_BOARD}>Randomly with radius</option>
         </Field>
       </div>
     </div>

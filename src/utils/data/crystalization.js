@@ -39,8 +39,13 @@ function crystalization (boardData, iteration) {
   tempBoard = tempBoard.map((rowData, row) => rowData.map((cell, column) => {
     if (cell.value === 1) {
       //check if neighbours crystalized or reached crticial value of dyslocations
-      let isNearCrystal = getNeighbours(boardData, row, column, getCellPeriodic).some(e => e.value === 2)
-      if (cell.dys > criticalRo || isNearCrystal) {
+      let neighbours = getNeighbours(boardData, row, column, getCellPeriodic),
+      isOnBorder = neighbours.some(e => e.color !== boardData[row][column].color),
+      isNearCrystal = neighbours.filter(e => e.color === boardData[row][column].color).some(e => e.value === 2),
+      hasBiggerDyslocation = neighbours
+        .every(e => e.dys < boardData[row][column].dys)
+
+      if (cell.dys > criticalRo || isNearCrystal) { //|| isNearCrystal && !isOnBorder) {
         return setCrystal(cell)
       }
     }

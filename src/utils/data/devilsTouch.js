@@ -1,37 +1,37 @@
-import { getCriticalRo } from './setDyslocation'
+import getDensity from './getDensity'
 import { getNeighbours } from './crystalization'
-import { getCellPeriodic, getCell } from './../lifeType/getCell'
+import { getCellPeriodic } from './../lifeType/getCell'
 
 const generateRandom = (size) => {
-  return () => Math.floor(Math.random() * size)
+  return Math.floor(Math.random() * size)
+}
+
+const getBorderNotCrystal = (boardData) => {
+  return boardData.map((row, i) => row.filter((cell, j) => {
+    let neighbours = getNeighbours(boardData, i, j, getCellPeriodic),
+      isOnBorder = neighbours.some(e => e.color !== boardData[i][j].color)
+    return isOnBorder && cell.value === 1
+  })).filter(row => row.length)
 }
 
 export default (boardData, iteration) => {
-  const size = boardData.length
-  const rand = generateRandom(size)
-  const fun = getCellPeriodic
-  const allDys = boardData
+  let filteredData = getBorderNotCrystal(boardData)
+  const dyslocationSum = boardData
     .reduce((a, b) => a.concat(b))
     .reduce((acc, e) => acc + e.dys, 0)
 
-  const critRo = getCriticalRo(iteration, size)
-  let diff = critRo * (size * size) - allDys
-  const devil = 1000
+  const dyslocations = getDensity(iteration)
+  let diff = dyslocations - dyslocationSum
+  const devil = 15
   const singleDevil = diff / devil
   //assign random cell on boardData += cellRo
   // until diff is 0
-  let counter = 0
-  while (diff > 0 && counter < devil) {
-    let row = rand(),
-        col = rand(),
-        neighbours = getNeighbours(boardData, row, col, fun),
-        isOnBorder = neighbours.some(e => e.color !== boardData[row][col].color)
+  while (diff > 0 && filteredData.length) {
+    let row = generateRandom(filteredData.length - 1),
+      col = generateRandom(filteredData[row].length - 1)
 
-    if (isOnBorder && boardData[row][col].value === 1) {
-      boardData[row][col].dys += singleDevil
-      diff -= singleDevil
-    }
-    counter++
+    filteredData[row][col].dys += singleDevil
+    diff -= singleDevil
   }
   return boardData
 }

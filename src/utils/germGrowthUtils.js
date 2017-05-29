@@ -58,6 +58,7 @@ export function boardLifecycle (boardData, settings) {
   let isGrown = boardData.every(rowData => rowData.every(cell => cell.value))
   if (isGrown) {
     tempBoard = crystalization(tempBoard, iteration)
+    console.log(iteration * 100)
     iteration += 0.001
   }
   return tempBoard
