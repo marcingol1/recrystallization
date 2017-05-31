@@ -11,7 +11,7 @@ import { generateBoard } from '../utils/generateUtils'
 export function createBoard (form) {
   return {
     type: ActionType.CREATE_BOARD,
-    board: generateBoard(form.boardSize, form.distributionType, form.pointsQuantity, form.colorsQuantity)
+    board: generateBoard(form.boardSize, form.distributionType, form.pointsQuantity, form.monteCarlo)
   }
 }
 

@@ -15,11 +15,11 @@ export function getDeltaRo (iteration, size) {
     pointRo.iteration = iteration
     pointRo.value = (t2 - t1) / (size * size)
   }
-  return (t2 - t1) / (size * size)
+  return pointRo.value
 }
 
 export function getCriticalRo (iteration, size) {
-  return getDensity(iteration) / (size * size)
+  return 4215840142323 / (size * size) //getDensity(iteration) / (size * size)
 }
 
 /**

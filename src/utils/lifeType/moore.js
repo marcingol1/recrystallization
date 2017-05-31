@@ -1,6 +1,5 @@
 import { getCellPeriodic, getCell } from './getCell'
-import { setCell, setCrystal } from './setCell'
-import setDyslocation from './../data/setDyslocation'
+import { setCell } from './setCell'
 
 /**
  * Creates array of neighbours for a cell

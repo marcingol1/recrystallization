@@ -18,8 +18,8 @@ export function getNeighbours(boardData, row, column, fun) {
     return boardData[coordinates[0]][coordinates[1]]
   })
 }
-
-function crystalization (boardData, iteration) {
+let sumDys = 0
+function crystalization (boardData, iteration, settings) {
   const size = boardData.length
   const criticalRo = getCriticalRo(iteration, size)
   //set dyslocations
@@ -27,25 +27,23 @@ function crystalization (boardData, iteration) {
     if (cell.value === 1) {
       const neighbours = getNeighbours(boardData, row, column, getCellPeriodic)
       const dyslocation = getDyslocation(boardData[row][column], neighbours, size, iteration)
+      sumDys += dyslocation
       return {
         ...cell,
-        dys: dyslocation
+        dys: cell.dys + dyslocation
       }
     }
     return cell
   }))
-  devilsTouch(tempBoard, iteration)
+  devilsTouch(tempBoard, iteration, settings)
   //make new germs
   tempBoard = tempBoard.map((rowData, row) => rowData.map((cell, column) => {
     if (cell.value === 1) {
       //check if neighbours crystalized or reached crticial value of dyslocations
       let neighbours = getNeighbours(boardData, row, column, getCellPeriodic),
-      isOnBorder = neighbours.some(e => e.color !== boardData[row][column].color),
-      isNearCrystal = neighbours.filter(e => e.color === boardData[row][column].color).some(e => e.value === 2),
-      hasBiggerDyslocation = neighbours
-        .every(e => e.dys < boardData[row][column].dys)
+      isNearCrystal = neighbours.filter(e => e.color === boardData[row][column].color).some(e => e.value === 2)
 
-      if (cell.dys > criticalRo || isNearCrystal) { //|| isNearCrystal && !isOnBorder) {
+      if (cell.dys > criticalRo || isNearCrystal) {
         return setCrystal(cell)
       }
     }

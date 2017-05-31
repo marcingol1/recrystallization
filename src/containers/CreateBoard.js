@@ -6,10 +6,12 @@ import Settings from '../constants/Settings'
 
 const initialValues = {
   neighbourhoodType: Settings.MOORE,
-  distributionType: Settings.RANDOM_RADIUS_BOARD,
+  distributionType: Settings.MONTE_CARLO,
   borderCondition: true,
   boardSize: 40,
-  pointsQuantity: 5
+  pointsQuantity: 5,
+  devil: 100,
+  monteCarlo: 100
 }
 
 let CreateBoard = ({createBoard, handleSubmit}) => (
@@ -31,6 +33,7 @@ let CreateBoard = ({createBoard, handleSubmit}) => (
       <div id="generating-germs">
         <label>Distribution</label>
         <Field name="distributionType" component="select">
+          <option value={Settings.MONTE_CARLO}>Monte Carlo</option>
           <option value={Settings.RANDOM_RADIUS_BOARD}>Randomly with radius</option>
           <option value={Settings.RANDOM_BOARD}>Randomly</option>
           <option value={Settings.CLEAR_BOARD}>Clear</option>
@@ -47,6 +50,17 @@ let CreateBoard = ({createBoard, handleSubmit}) => (
       <div>
       <label htmlFor="board-size">Board size</label>
       <Field name="boardSize" component="input" type="text"/>
+      </div>
+    </div>
+
+    <div className="form-part">
+      <div>
+        <label htmlFor="devil">Devil's number</label>
+        <Field name="devil" component="input" type="text"/>
+      </div>
+      <div>
+        <label htmlFor="monteCarlo">Monte Carlo Iterations</label>
+        <Field name="monteCarlo" component="input" type="text"/>
       </div>
     </div>
 

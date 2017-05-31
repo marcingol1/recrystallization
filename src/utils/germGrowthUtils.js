@@ -5,8 +5,6 @@ import mooreRule from './lifeType/moore'
 import vonNeumanRule from './lifeType/vonNeumann'
 import pentRandRule from './lifeType/pent'
 import crystalization from './data/crystalization'
-import { setCrystal } from './lifeType/setCell'
-import { getCellPeriodic, getCell } from './lifeType/getCell'
 
 let iteration = 0.001
 /**
@@ -57,8 +55,7 @@ export function boardLifecycle (boardData, settings) {
   }))
   let isGrown = boardData.every(rowData => rowData.every(cell => cell.value))
   if (isGrown) {
-    tempBoard = crystalization(tempBoard, iteration)
-    console.log(iteration * 100)
+    tempBoard = crystalization(tempBoard, iteration, settings)
     iteration += 0.001
   }
   return tempBoard

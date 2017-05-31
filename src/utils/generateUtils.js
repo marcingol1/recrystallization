@@ -10,7 +10,7 @@ import monteCarlo from './generateTypes/monteCarlo'
  * @param type - type of allocating alive cells
  * @param pointsQuantity - quantity of points to get
  */
-export function generateBoard(size = 0, type, pointsQuantity = 0) {
+export function generateBoard(size = 0, type, pointsQuantity = 0, devil = 100) {
   switch (type) {
     case Settings.CLEAR_BOARD: {
       return clearBoard(size)
@@ -25,7 +25,7 @@ export function generateBoard(size = 0, type, pointsQuantity = 0) {
       return randomBoardRadius(size, pointsQuantity)
     }
     case Settings.MONTE_CARLO: {
-      return monteCarlo(size, pointsQuantity)
+      return monteCarlo(size, devil)
     }
     default: {
       return randomBoard(size)

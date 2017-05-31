@@ -6,7 +6,7 @@ const A = 86710969050178.5,
 
 function getDensity(t) {
   if (t <= 0) return 0
-  return C + D*Math.pow(Math.E, -B*t)
+  return C + D*Math.exp((-B)*t)
 }
 
 export default getDensity

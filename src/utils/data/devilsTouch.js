@@ -14,7 +14,7 @@ const getBorderNotCrystal = (boardData) => {
   })).filter(row => row.length)
 }
 
-export default (boardData, iteration) => {
+export default (boardData, iteration, settings) => {
   let filteredData = getBorderNotCrystal(boardData)
   const dyslocationSum = boardData
     .reduce((a, b) => a.concat(b))
@@ -22,7 +22,8 @@ export default (boardData, iteration) => {
 
   const dyslocations = getDensity(iteration)
   let diff = dyslocations - dyslocationSum
-  const devil = 15
+  console.log(dyslocations, dyslocationSum)
+  const devil = settings.devil
   const singleDevil = diff / devil
   //assign random cell on boardData += cellRo
   // until diff is 0
